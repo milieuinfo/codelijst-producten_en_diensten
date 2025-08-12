@@ -15,6 +15,7 @@ skos:
   rdf_xml: .rdf
   xlsx: .xlsx
   nt: .nt
+  json: .json
   parquet: .parquet
 
 source:

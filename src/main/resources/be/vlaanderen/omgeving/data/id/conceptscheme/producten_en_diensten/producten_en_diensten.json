@@ -1,0 +1,700 @@
+[
+    {
+        "id": "http://qudt.org/vocab/quantitykind/Acidity",
+        "type": [
+            "http://qudt.org/schema/qudt/QuantityKind"
+        ],
+        "applicableUnit": "http://qudt.org/vocab/unit/PH"
+    },
+    {
+        "id": "http://qudt.org/vocab/quantitykind/Basicity",
+        "type": [
+            "http://qudt.org/schema/qudt/QuantityKind"
+        ],
+        "applicableUnit": "http://qudt.org/vocab/unit/PH"
+    },
+    {
+        "id": "http://qudt.org/vocab/quantitykind/Conductivity",
+        "type": [
+            "http://qudt.org/schema/qudt/QuantityKind"
+        ],
+        "applicableUnit": "http://qudt.org/vocab/unit/MilliS-PER-CentiM"
+    },
+    {
+        "id": "http://qudt.org/vocab/quantitykind/Count",
+        "type": [
+            "http://qudt.org/schema/qudt/QuantityKind"
+        ],
+        "applicableUnit": "http://qudt.org/vocab/unit/NUM"
+    },
+    {
+        "id": "http://qudt.org/vocab/quantitykind/Fugacity",
+        "type": [
+            "http://qudt.org/schema/qudt/QuantityKind"
+        ],
+        "applicableUnit": "http://qudt.org/vocab/unit/PA"
+    },
+    {
+        "id": "http://qudt.org/vocab/quantitykind/VaporPressure",
+        "type": [
+            "http://qudt.org/schema/qudt/QuantityKind"
+        ],
+        "applicableUnit": "http://qudt.org/vocab/unit/PA"
+    },
+    {
+        "id": "http://qudt.org/vocab/quantitykind/Volume",
+        "type": [
+            "http://qudt.org/schema/qudt/QuantityKind"
+        ],
+        "applicableUnit": "http://qudt.org/vocab/unit/M3"
+    },
+    {
+        "id": "http://qudt.org/vocab/quantitykind/VolumeFlowRate",
+        "type": [
+            "http://qudt.org/schema/qudt/QuantityKind"
+        ],
+        "applicableUnit": "http://qudt.org/vocab/unit/M3-PER-HR"
+    },
+    {
+        "id": "http://qudt.org/vocab/quantitykind/VolumePerTime",
+        "type": [
+            "http://qudt.org/schema/qudt/QuantityKind"
+        ],
+        "applicableUnit": "http://qudt.org/vocab/unit/M3-PER-HR"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspoelwaterproductie",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3"
+        ],
+        "relevantQuantityKind": [
+            "http://qudt.org/vocab/quantitykind/Volume"
+        ],
+        "seeAlso": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "Biobedspoelwaterproductie",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspuiwaterproductie",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/spuiwater",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3"
+        ],
+        "relevantQuantityKind": [
+            "http://qudt.org/vocab/quantitykind/Volume"
+        ],
+        "seeAlso": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0050",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "Biobedspuiwaterproductie",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/lucht",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2"
+        ],
+        "relevantQuantityKind": [
+            "http://qudt.org/vocab/quantitykind/Fugacity",
+            "http://qudt.org/vocab/quantitykind/VaporPressure"
+        ],
+        "seeAlso": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0329",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "Drukval over het systeem",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2"
+        ],
+        "relevantQuantityKind": [
+            "http://qudt.org/vocab/quantitykind/Conductivity"
+        ],
+        "seeAlso": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0010",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "Geleidbaarheid van het waswater",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/spuiwater",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2"
+        ],
+        "relevantQuantityKind": [
+            "http://qudt.org/vocab/quantitykind/Volume"
+        ],
+        "seeAlso": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0050",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "Spuiwaterproductie",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/stalbezetting",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/stal",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "Stalbezetting",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/systeemstatus",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/hetelektronischmonitoringssysteem",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "SysteemStatus",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2"
+        ],
+        "relevantQuantityKind": [
+            "http://qudt.org/vocab/quantitykind/VolumeFlowRate",
+            "http://qudt.org/vocab/quantitykind/VolumePerTime"
+        ],
+        "seeAlso": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "Waswaterdebiet over het waspakket",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietbevloeiing",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3"
+        ],
+        "relevantQuantityKind": [
+            "http://qudt.org/vocab/quantitykind/VolumeFlowRate",
+            "http://qudt.org/vocab/quantitykind/VolumePerTime"
+        ],
+        "seeAlso": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "Waswaterdebiet van de bevloeiing van het vulmateriaal",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietvoorbevochtiging",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3"
+        ],
+        "relevantQuantityKind": [
+            "http://qudt.org/vocab/quantitykind/VolumeFlowRate",
+            "http://qudt.org/vocab/quantitykind/VolumePerTime"
+        ],
+        "seeAlso": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "Waswaterdebiet van de voorbevochtiging van de ingaande stallucht",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/ns/ssn/Property"
+        ],
+        "subject": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater",
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2"
+        ],
+        "relevantQuantityKind": [
+            "http://qudt.org/vocab/quantitykind/Acidity",
+            "http://qudt.org/vocab/quantitykind/Basicity"
+        ],
+        "seeAlso": "https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0076",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "prefLabel": "Zuurtegraad van het waswater",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "broader": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem",
+        "broaderTransitive": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzs",
+        "narrower": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2"
+        ],
+        "narrowerTransitive": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2"
+        ],
+        "prefLabel": "Luchtwassysteem",
+        "semanticRelation": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem"
+        ]
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzs",
+        "narrower": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem"
+        ],
+        "narrowerTransitive": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem"
+        ],
+        "prefLabel": "Luchtzuiveringssysteem",
+        "semanticRelation": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem"
+        ],
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzs"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/hetelektronischmonitoringssysteem",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/2000/01/rdf-schema#Resource"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm",
+        "prefLabel": "Het elektronisch monitoringssysteem",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/lucht",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/2000/01/rdf-schema#Resource"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm",
+        "prefLabel": "Lucht",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/spuiwater",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/2000/01/rdf-schema#Resource"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm",
+        "prefLabel": "Spuiwater",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/stal",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/2000/01/rdf-schema#Resource"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm",
+        "prefLabel": "Stal",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept",
+            "http://www.w3.org/2000/01/rdf-schema#Resource"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm",
+        "prefLabel": "Waswater",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/1",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1"
+        ],
+        "definition": "Onder de minimum grenswaarde van 6",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "note": "Onder de minimum grenswaarde van 6",
+        "prefLabel": "Zuurtegraad waswater < 6",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "relevantProperty": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater",
+        "maxValue": "6.0"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1"
+        ],
+        "definition": "Boven de maximum grenswaarde van 8,5",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "note": "Boven de maximum grenswaarde van 8,5",
+        "prefLabel": "Zuurtegraad waswater > 8,5",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "relevantProperty": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater",
+        "minValue": "8.5"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1"
+        ],
+        "definition": "Boven de maximale waarde op technische fiche",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "note": "Boven de maximale waarde op technische fiche",
+        "prefLabel": "Geleidbaarheid > maximum operationele waarde",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "operatie": "som",
+        "relevantProperty": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater",
+        "minValue": "0.0"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1"
+        ],
+        "definition": "Onder de minimum grenswaarde, een afwijking > 20% t.o.v referentiewaarde technische fiche",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "note": "Onder de minimum grenswaarde, een afwijking > 20% t.o.v referentiewaarde technische fiche",
+        "prefLabel": "Waswaterdebiet afwijking > 20% onder normale operationele waarde",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "operatie": "product",
+        "relevantProperty": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet",
+        "maxValue": "0.8"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1"
+        ],
+        "definition": "Onder de minimum grenswaarde, een afwijking > 10% t.o.v referentiewaarde technische fiche",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "note": "Onder de minimum grenswaarde, een afwijking > 10% t.o.v referentiewaarde technische fiche",
+        "prefLabel": "Spuiwaterproductie afwijking > 10% normale operationele waarde",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "operatie": "product",
+        "relevantProperty": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie",
+        "maxValue": "0.9"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1"
+        ],
+        "definition": "Onder de minimum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "note": "Onder de minimum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche",
+        "prefLabel": "Drukval afwijking > 40% onder normale operationele waarde",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "operatie": "product",
+        "relevantProperty": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem",
+        "maxValue": "0.6"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1"
+        ],
+        "definition": "Boven de maximum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "note": "Boven de maximum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche",
+        "prefLabel": "Drukval afwijking > 40% normale operationele waarde",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "operatie": "product",
+        "relevantProperty": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem",
+        "minValue": "1.4"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2"
+        ],
+        "definition": "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 1 pH)",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "note": "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 1 pH)",
+        "prefLabel": "Zuurtegraad waswater afwijking > 1 pH-eenheid boven normale operationele waarde",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "operatie": "som",
+        "relevantProperty": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater",
+        "minValue": "1.0"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "dct_type": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3"
+        ],
+        "definition": "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 50 Pa)",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "note": "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 50 Pa)",
+        "prefLabel": "Bandbreedte drukval afwijking > 50 Pa boven normale operationele waarde",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "operatie": "som",
+        "relevantProperty": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem",
+        "minValue": "50.0"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "broader": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem",
+        "broaderTransitive": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzs",
+        "notation": "S1",
+        "prefLabel": "Biologisch luchtwassysteem",
+        "semanticRelation": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem"
+        ]
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "broader": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem",
+        "broaderTransitive": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzs",
+        "notation": "S2",
+        "prefLabel": "Chemisch luchtwassysteem",
+        "semanticRelation": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem"
+        ]
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "broader": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem",
+        "broaderTransitive": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem",
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzs",
+        "notation": "S3",
+        "prefLabel": "Biobed",
+        "semanticRelation": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem"
+        ]
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/stalgebruik/in_gebruik",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsst",
+        "prefLabel": "Stal in gebruik, dieren aanwezig.",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsst"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/stalgebruik/leeg",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsst",
+        "prefLabel": "Lege stal",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsst"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/status/onderhoud",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzss",
+        "prefLabel": "In onderhoud",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzss"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/status/operationeel",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzss",
+        "prefLabel": "Operationeel",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzss"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/status/storing",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#Concept"
+        ],
+        "inScheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzss",
+        "prefLabel": "Storing",
+        "topConceptOf": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzss"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzs",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+        ],
+        "hasTopConcept": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem"
+        ],
+        "prefLabel": "conceptschema luchtzuiveringssysteem"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsm",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+        ],
+        "hasTopConcept": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/spuiwater",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/lucht",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/stal",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/hetelektronischmonitoringssysteem"
+        ],
+        "prefLabel": "conceptschema luchtzuiveringssysteem medium"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+        ],
+        "hasTopConcept": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspoelwaterproductie",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspuiwaterproductie",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/stalbezetting",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/systeemstatus",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietbevloeiing",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietvoorbevochtiging",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater"
+        ],
+        "prefLabel": "conceptschema luchtzuiveringssysteem eigenschap"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzss",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+        ],
+        "hasTopConcept": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/status/onderhoud",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/status/operationeel",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/status/storing"
+        ],
+        "prefLabel": "conceptschema luchtzuiveringssysteem status"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsst",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+        ],
+        "hasTopConcept": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/stalgebruik/in_gebruik",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/stalgebruik/leeg"
+        ],
+        "prefLabel": "conceptschema luchtzuiveringssysteem stalbezetting"
+    },
+    {
+        "id": "https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte",
+        "type": [
+            "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+        ],
+        "altLabel": "Ranges",
+        "hasTopConcept": [
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/1",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8",
+            "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9"
+        ],
+        "prefLabel": "conceptschema luchtzuiveringssysteem normbandbreedte"
+    }
+]

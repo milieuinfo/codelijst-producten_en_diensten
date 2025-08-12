@@ -308,11 +308,17 @@ const jsonldOptions = {"file": config.skos.path + config.skos.name + '/' + confi
 
 const csvOptions = {"file": config.skos.path + config.skos.name + '/' + config.skos.name + config.skos.csv, "frame": frame_skos_no_prefixes}
 
+const jsonOptions = {"file": config.skos.path + config.skos.name + '/' + config.skos.name + config.skos.json, "frame": frame_skos_no_prefixes}
+
+const options = {
+    "turtlePath": turtlePath,
+    "jsonOptions": jsonOptions,
+    "jsonldOptions": jsonldOptions,
+    "ntriplesPath": ntriplesPath,
+    "csvOptions": csvOptions
+}
 
 export {
     virtuoso,
-    turtlePath,
-    jsonldOptions,
-    ntriplesPath,
-    csvOptions
+    options
 };
