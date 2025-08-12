@@ -1,0 +1,382 @@
+@prefix concept: <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/property/>.
+@prefix collectie: <https://data.omgeving.vlaanderen.be/id/collection/producten_en_diensten/>.
+@prefix access_right: <http://publications.europa.eu/resource/authority/access-right/>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix assettype: <http://purl.org/adms/assettype/>.
+@prefix conceptscheme: <https://data.omgeving.vlaanderen.be/id/conceptscheme/>.
+@prefix country: <http://publications.europa.eu/resource/authority/country/>.
+@prefix datasets: <https://datasets.omgeving.vlaanderen.be/>.
+@prefix datatheme_be: <http://vocab.belgif.be/auth/datatheme/>.
+@prefix datatheme_eu: <http://publications.europa.eu/resource/authority/data-theme/>.
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix eurovoc: <http://eurovoc.europa.eu/>.
+@prefix file_type: <http://publications.europa.eu/resource/authority/file-type/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix formats: <http://www.w3.org/ns/formats/>.
+@prefix frequency: <http://publications.europa.eu/resource/authority/frequency/>.
+@prefix gemet: <http://www.eionet.europa.eu/gemet/concept/>.
+@prefix schema: <https://schema.org/>.
+@prefix licence: <http://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/>.
+@prefix metadata: <https://data.omgeving.vlaanderen.be/ns/metadata#>.
+@prefix omg_catalog: <https://data.omgeving.vlaanderen.be/id/catalog/>.
+@prefix omg_catalog_doc: <https://data.omgeving.vlaanderen.be/doc/catalog/>.
+@prefix omg_collection: <https://data.omgeving.vlaanderen.be/id/collection/>.
+@prefix omg_dataservice: <https://data.omgeving.vlaanderen.be/id/dataservice/>.
+@prefix omg_dataset_doc: <https://data.omgeving.vlaanderen.be/doc/dataset/>.
+@prefix omg_dataset: <https://data.omgeving.vlaanderen.be/id/dataset/>.
+@prefix omg_distribution_doc: <https://data.omgeving.vlaanderen.be/doc/distribution/>.
+@prefix omg_distribution: <https://data.omgeving.vlaanderen.be/id/distribution/>.
+@prefix omg_graphcollection: <https://data.omgeving.vlaanderen.be/id/graphcollection/>.
+@prefix omg_graph: <https://data.omgeving.vlaanderen.be/id/graph/>.
+@prefix omg_id: <https://data.omgeving.vlaanderen.be/id/>.
+@prefix omg_named_graph: <https://data.omgeving.vlaanderen.be/id/namedgraph/>.
+@prefix omg_ontology: <https://data.omgeving.vlaanderen.be/id/ontology/>.
+@prefix omg_package: <https://data.omgeving.vlaanderen.be/id/package/>.
+@prefix omg_periodoftime: <https://data.omgeving.vlaanderen.be/id/periodoftime/>.
+@prefix omg_service: <https://data.omgeving.vlaanderen.be/id/service/>.
+@prefix omg_vcard: <https://data.omgeving.vlaanderen.be/id/vcard/>.
+@prefix ovo: <http://data.vlaanderen.be/id/organisatie/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix repo: <https://repo.omgeving.vlaanderen.be/artifactory/release/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix spdx: <http://spdx.org/rdf/terms#>.
+@prefix ssd: <http://www.w3.org/ns/sparql-service-description#>.
+@prefix ts: <http://www.w3.org/ns/formats/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix wise: <http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty/>.
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wb: <https://data.omgeving.vlaanderen.be/id/concept/waardebepaling/>.
+@prefix normatieve_structuur: <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/normatieve_structuur/>.
+@prefix lzp: <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/property/>.
+@prefix lzs-type: <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/>.
+@prefix lzs-norm: <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/>.
+@prefix lzss: <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/status/>.
+@prefix lzsst: <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/stalgebruik/>.
+@prefix lzsm: <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/>.
+@prefix lzsp: <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/>.
+@prefix dr: <https://data.omgeving.vlaanderen.be/id/concept/drager/>.
+@prefix lzsns: <https://data.omgeving.vlaanderen.be/ns/lzs#>.
+@prefix qudt: <http://qudt.org/schema/qudt/>.
+@prefix unit: <http://qudt.org/vocab/unit/>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/>.
+@prefix ssn: <http://www.w3.org/ns/ssn/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix procedure: <https://data.omgeving.vlaanderen.be/id/concept/observatieprocedure/>.
+
+quantitykind:Acidity qudt:applicableUnit unit:PH;
+    a qudt:QuantityKind.
+quantitykind:Basicity qudt:applicableUnit unit:PH;
+    a qudt:QuantityKind.
+quantitykind:Conductivity qudt:applicableUnit unit:MilliS-PER-CentiM;
+    a qudt:QuantityKind.
+quantitykind:Count qudt:applicableUnit unit:NUM;
+    a qudt:QuantityKind.
+quantitykind:Fugacity qudt:applicableUnit unit:PA;
+    a qudt:QuantityKind.
+quantitykind:VaporPressure qudt:applicableUnit unit:PA;
+    a qudt:QuantityKind.
+quantitykind:Volume qudt:applicableUnit unit:M3;
+    a qudt:QuantityKind.
+quantitykind:VolumeFlowRate qudt:applicableUnit unit:M3-PER-HR;
+    a qudt:QuantityKind.
+quantitykind:VolumePerTime qudt:applicableUnit unit:M3-PER-HR;
+    a qudt:QuantityKind.
+lzsp:biobedspoelwaterproductie dct:subject lzsm:waswater;
+    dct:type lzs-type:s3;
+    qudt:relevantQuantityKind quantitykind:Volume;
+    qudt:relevantUnit unit:M3;
+    a skos:Concept, ssn:Property;
+    rdfs:seeAlso <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053>;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "Biobedspoelwaterproductie"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:relevantDataType xsd:decimal.
+lzsp:biobedspuiwaterproductie dct:subject lzsm:spuiwater;
+    dct:type lzs-type:s3;
+    qudt:relevantQuantityKind quantitykind:Volume;
+    qudt:relevantUnit unit:M3;
+    a skos:Concept, ssn:Property;
+    rdfs:seeAlso <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0050>;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "Biobedspuiwaterproductie"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:relevantDataType xsd:decimal.
+lzsp:drukvaloverhetsysteem dct:subject lzsm:lucht;
+    dct:type lzs-type:s1, lzs-type:s2, lzs-type:s3;
+    qudt:relevantQuantityKind quantitykind:Fugacity, quantitykind:VaporPressure;
+    qudt:relevantUnit unit:PA;
+    a skos:Concept, ssn:Property;
+    rdfs:seeAlso <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0329>;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "Drukval over het systeem"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:relevantDataType xsd:decimal.
+lzsp:geleidbaarheidvanhetwaswater dct:subject lzsm:waswater;
+    dct:type lzs-type:s1, lzs-type:s2;
+    qudt:relevantQuantityKind quantitykind:Conductivity;
+    qudt:relevantUnit unit:MilliS-PER-CentiM;
+    a skos:Concept, ssn:Property;
+    rdfs:seeAlso <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0010>;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "Geleidbaarheid van het waswater"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:hasProcedureForProperty procedure:WAC_I_A_011;
+    lzsns:relevantDataType xsd:decimal.
+lzsp:spuiwaterproductie dct:subject lzsm:spuiwater;
+    dct:type lzs-type:s1, lzs-type:s2;
+    qudt:relevantQuantityKind quantitykind:Volume;
+    qudt:relevantUnit unit:M3;
+    a skos:Concept, ssn:Property;
+    rdfs:seeAlso <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0050>;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "Spuiwaterproductie"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:relevantDataType xsd:decimal.
+lzsp:stalbezetting dct:subject lzsm:stal;
+    dct:type lzs-type:s1, lzs-type:s2, lzs-type:s3;
+    a skos:Concept, ssn:Property;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "Stalbezetting"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:relevantCodeList conceptscheme:lzsst.
+lzsp:systeemstatus dct:subject lzsm:hetelektronischmonitoringssysteem;
+    dct:type lzs-type:s1, lzs-type:s2, lzs-type:s3;
+    a skos:Concept, ssn:Property;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "SysteemStatus"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:relevantCodeList conceptscheme:lzss.
+lzsp:waswaterdebiet dct:subject lzsm:waswater;
+    dct:type lzs-type:s1, lzs-type:s2;
+    qudt:relevantQuantityKind quantitykind:VolumeFlowRate, quantitykind:VolumePerTime;
+    qudt:relevantUnit unit:M3-PER-HR;
+    a skos:Concept, ssn:Property;
+    rdfs:seeAlso <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053>;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "Waswaterdebiet over het waspakket"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:relevantDataType xsd:decimal.
+lzsp:waswaterdebietbevloeiing dct:subject lzsm:waswater;
+    dct:type lzs-type:s3;
+    qudt:relevantQuantityKind quantitykind:VolumeFlowRate, quantitykind:VolumePerTime;
+    qudt:relevantUnit unit:M3-PER-HR;
+    a skos:Concept, ssn:Property;
+    rdfs:seeAlso <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053>;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "Waswaterdebiet van de bevloeiing van het vulmateriaal"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:relevantDataType xsd:decimal.
+lzsp:waswaterdebietvoorbevochtiging dct:subject lzsm:waswater;
+    dct:type lzs-type:s3;
+    qudt:relevantQuantityKind quantitykind:VolumeFlowRate, quantitykind:VolumePerTime;
+    qudt:relevantUnit unit:M3-PER-HR;
+    a skos:Concept, ssn:Property;
+    rdfs:seeAlso <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0053>;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "Waswaterdebiet van de voorbevochtiging van de ingaande stallucht"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:relevantDataType xsd:decimal.
+lzsp:zuurtegraadwaswater dct:subject lzsm:waswater;
+    dct:type lzs-type:s1, lzs-type:s2;
+    qudt:relevantQuantityKind quantitykind:Acidity, quantitykind:Basicity;
+    qudt:relevantUnit unit:PH;
+    a skos:Concept, ssn:Property;
+    rdfs:seeAlso <https://data.omgeving.vlaanderen.be/id/concept/fysico-chemisch/0076>;
+    skos:inScheme conceptscheme:lzsp;
+    skos:prefLabel "Zuurtegraad van het waswater"@nl;
+    skos:topConceptOf conceptscheme:lzsp;
+    lzsns:hasProcedureForProperty procedure:WAC_I_A_011;
+    lzsns:relevantDataType xsd:decimal.
+lzs-type:luchtwassysteem a skos:Concept;
+    skos:broader lzs-type:luchtzuiveringssysteem;
+    skos:broaderTransitive lzs-type:luchtzuiveringssysteem;
+    skos:inScheme conceptscheme:lzs;
+    skos:narrower lzs-type:s1, lzs-type:s2;
+    skos:narrowerTransitive lzs-type:s1, lzs-type:s2;
+    skos:prefLabel "Luchtwassysteem"@nl;
+    skos:semanticRelation lzs-type:luchtzuiveringssysteem, lzs-type:s1, lzs-type:s2.
+lzs-type:luchtzuiveringssysteem a skos:Concept;
+    skos:inScheme conceptscheme:lzs;
+    skos:narrower lzs-type:luchtwassysteem, lzs-type:s3;
+    skos:narrowerTransitive lzs-type:luchtwassysteem, lzs-type:s1, lzs-type:s2, lzs-type:s3;
+    skos:prefLabel "Luchtzuiveringssysteem"@nl;
+    skos:semanticRelation lzs-type:luchtwassysteem, lzs-type:s1, lzs-type:s2, lzs-type:s3;
+    skos:topConceptOf conceptscheme:lzs.
+lzsm:hetelektronischmonitoringssysteem a rdfs:Resource, skos:Concept;
+    skos:inScheme conceptscheme:lzsm;
+    skos:prefLabel "Het elektronisch monitoringssysteem"@nl;
+    skos:topConceptOf conceptscheme:lzsm.
+lzsm:lucht a rdfs:Resource, skos:Concept;
+    skos:inScheme conceptscheme:lzsm;
+    skos:prefLabel "Lucht"@nl;
+    skos:topConceptOf conceptscheme:lzsm.
+lzsm:spuiwater a rdfs:Resource, skos:Concept;
+    skos:inScheme conceptscheme:lzsm;
+    skos:prefLabel "Spuiwater"@nl;
+    skos:topConceptOf conceptscheme:lzsm.
+lzsm:stal a rdfs:Resource, skos:Concept;
+    skos:inScheme conceptscheme:lzsm;
+    skos:prefLabel "Stal"@nl;
+    skos:topConceptOf conceptscheme:lzsm.
+lzsm:waswater a rdfs:Resource, skos:Concept;
+    skos:inScheme conceptscheme:lzsm;
+    skos:prefLabel "Waswater"@nl;
+    skos:topConceptOf conceptscheme:lzsm.
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/1> dct:type lzs-type:s1;
+    a skos:Concept;
+    skos:definition "Onder de minimum grenswaarde van 6"@nl;
+    skos:inScheme conceptscheme:norm_bandbreedte;
+    skos:note "Onder de minimum grenswaarde van 6"@nl;
+    skos:prefLabel "Zuurtegraad waswater < 6"@nl;
+    skos:topConceptOf conceptscheme:norm_bandbreedte;
+    lzsns:relevantProperty lzsp:zuurtegraadwaswater;
+    schema:maxValue 6.0.
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2> dct:type lzs-type:s1;
+    a skos:Concept;
+    skos:definition "Boven de maximum grenswaarde van 8,5"@nl;
+    skos:inScheme conceptscheme:norm_bandbreedte;
+    skos:note "Boven de maximum grenswaarde van 8,5"@nl;
+    skos:prefLabel "Zuurtegraad waswater > 8,5"@nl;
+    skos:topConceptOf conceptscheme:norm_bandbreedte;
+    lzsns:relevantProperty lzsp:zuurtegraadwaswater;
+    schema:minValue 8.5.
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> dct:type lzs-type:s1;
+    a skos:Concept;
+    skos:definition "Boven de maximale waarde op technische fiche"@nl;
+    skos:inScheme conceptscheme:norm_bandbreedte;
+    skos:note "Boven de maximale waarde op technische fiche"@nl;
+    skos:prefLabel "Geleidbaarheid > maximum operationele waarde"@nl;
+    skos:topConceptOf conceptscheme:norm_bandbreedte;
+    lzsns:operatie "som"@nl;
+    lzsns:relevantProperty lzsp:geleidbaarheidvanhetwaswater;
+    schema:minValue 0.0.
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> dct:type lzs-type:s1;
+    a skos:Concept;
+    skos:definition "Onder de minimum grenswaarde, een afwijking > 20% t.o.v referentiewaarde technische fiche"@nl;
+    skos:inScheme conceptscheme:norm_bandbreedte;
+    skos:note "Onder de minimum grenswaarde, een afwijking > 20% t.o.v referentiewaarde technische fiche"@nl;
+    skos:prefLabel "Waswaterdebiet afwijking > 20% onder normale operationele waarde"@nl;
+    skos:topConceptOf conceptscheme:norm_bandbreedte;
+    lzsns:operatie "product"@nl;
+    lzsns:relevantProperty lzsp:waswaterdebiet;
+    schema:maxValue 0.8.
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> dct:type lzs-type:s1;
+    a skos:Concept;
+    skos:definition "Onder de minimum grenswaarde, een afwijking > 10% t.o.v referentiewaarde technische fiche"@nl;
+    skos:inScheme conceptscheme:norm_bandbreedte;
+    skos:note "Onder de minimum grenswaarde, een afwijking > 10% t.o.v referentiewaarde technische fiche"@nl;
+    skos:prefLabel "Spuiwaterproductie afwijking > 10% normale operationele waarde"@nl;
+    skos:topConceptOf conceptscheme:norm_bandbreedte;
+    lzsns:operatie "product"@nl;
+    lzsns:relevantProperty lzsp:spuiwaterproductie;
+    schema:maxValue 0.9.
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> dct:type lzs-type:s1;
+    a skos:Concept;
+    skos:definition "Onder de minimum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche"@nl;
+    skos:inScheme conceptscheme:norm_bandbreedte;
+    skos:note "Onder de minimum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche"@nl;
+    skos:prefLabel "Drukval afwijking > 40% onder normale operationele waarde"@nl;
+    skos:topConceptOf conceptscheme:norm_bandbreedte;
+    lzsns:operatie "product"@nl;
+    lzsns:relevantProperty lzsp:drukvaloverhetsysteem;
+    schema:maxValue 0.6.
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> dct:type lzs-type:s1;
+    a skos:Concept;
+    skos:definition "Boven de maximum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche"@nl;
+    skos:inScheme conceptscheme:norm_bandbreedte;
+    skos:note "Boven de maximum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche"@nl;
+    skos:prefLabel "Drukval afwijking > 40% normale operationele waarde"@nl;
+    skos:topConceptOf conceptscheme:norm_bandbreedte;
+    lzsns:operatie "product"@nl;
+    lzsns:relevantProperty lzsp:drukvaloverhetsysteem;
+    schema:minValue 1.4.
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> dct:type lzs-type:s2;
+    a skos:Concept;
+    skos:definition "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 1 pH)"@nl;
+    skos:inScheme conceptscheme:norm_bandbreedte;
+    skos:note "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 1 pH)"@nl;
+    skos:prefLabel "Zuurtegraad waswater afwijking > 1 pH-eenheid boven normale operationele waarde"@nl;
+    skos:topConceptOf conceptscheme:norm_bandbreedte;
+    lzsns:operatie "som"@nl;
+    lzsns:relevantProperty lzsp:zuurtegraadwaswater;
+    schema:minValue 1.0.
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> dct:type lzs-type:s3;
+    a skos:Concept;
+    skos:definition "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 50 Pa)"@nl;
+    skos:inScheme conceptscheme:norm_bandbreedte;
+    skos:note "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 50 Pa)"@nl;
+    skos:prefLabel "Bandbreedte drukval afwijking > 50 Pa boven normale operationele waarde"@nl;
+    skos:topConceptOf conceptscheme:norm_bandbreedte;
+    lzsns:operatie "som"@nl;
+    lzsns:relevantProperty lzsp:drukvaloverhetsysteem;
+    schema:minValue 50.0.
+lzs-type:s1 a skos:Concept;
+    skos:broader lzs-type:luchtwassysteem;
+    skos:broaderTransitive lzs-type:luchtwassysteem, lzs-type:luchtzuiveringssysteem;
+    skos:inScheme conceptscheme:lzs;
+    skos:notation "S1";
+    skos:prefLabel "Biologisch luchtwassysteem"@nl;
+    skos:semanticRelation lzs-type:luchtwassysteem, lzs-type:luchtzuiveringssysteem.
+lzs-type:s2 a skos:Concept;
+    skos:broader lzs-type:luchtwassysteem;
+    skos:broaderTransitive lzs-type:luchtwassysteem, lzs-type:luchtzuiveringssysteem;
+    skos:inScheme conceptscheme:lzs;
+    skos:notation "S2";
+    skos:prefLabel "Chemisch luchtwassysteem"@nl;
+    skos:semanticRelation lzs-type:luchtwassysteem, lzs-type:luchtzuiveringssysteem.
+lzs-type:s3 a skos:Concept;
+    skos:broader lzs-type:luchtzuiveringssysteem;
+    skos:broaderTransitive lzs-type:luchtzuiveringssysteem;
+    skos:inScheme conceptscheme:lzs;
+    skos:notation "S3";
+    skos:prefLabel "Biobed"@nl;
+    skos:semanticRelation lzs-type:luchtzuiveringssysteem.
+lzsst:in_gebruik a skos:Concept;
+    skos:inScheme conceptscheme:lzsst;
+    skos:prefLabel "Stal in gebruik, dieren aanwezig."@nl;
+    skos:topConceptOf conceptscheme:lzsst.
+lzsst:leeg a skos:Concept;
+    skos:inScheme conceptscheme:lzsst;
+    skos:prefLabel "Lege stal"@nl;
+    skos:topConceptOf conceptscheme:lzsst.
+lzss:onderhoud a skos:Concept;
+    skos:inScheme conceptscheme:lzss;
+    skos:prefLabel "In onderhoud"@nl;
+    skos:topConceptOf conceptscheme:lzss.
+lzss:operationeel a skos:Concept;
+    skos:inScheme conceptscheme:lzss;
+    skos:prefLabel "Operationeel"@nl;
+    skos:topConceptOf conceptscheme:lzss.
+lzss:storing a skos:Concept;
+    skos:inScheme conceptscheme:lzss;
+    skos:prefLabel "Storing"@nl;
+    skos:topConceptOf conceptscheme:lzss.
+conceptscheme:lzs a skos:ConceptScheme;
+    skos:hasTopConcept lzs-type:luchtzuiveringssysteem;
+    skos:prefLabel "conceptschema luchtzuiveringssysteem"@nl.
+conceptscheme:lzsm a skos:ConceptScheme;
+    skos:hasTopConcept lzsm:hetelektronischmonitoringssysteem, lzsm:lucht, lzsm:spuiwater, lzsm:stal, lzsm:waswater;
+    skos:prefLabel "conceptschema luchtzuiveringssysteem medium"@nl.
+conceptscheme:lzsp a skos:ConceptScheme;
+    skos:hasTopConcept lzsp:biobedspoelwaterproductie, lzsp:biobedspuiwaterproductie, lzsp:drukvaloverhetsysteem, lzsp:geleidbaarheidvanhetwaswater, lzsp:spuiwaterproductie, lzsp:stalbezetting, lzsp:systeemstatus, lzsp:waswaterdebiet, lzsp:waswaterdebietbevloeiing, lzsp:waswaterdebietvoorbevochtiging, lzsp:zuurtegraadwaswater;
+    skos:prefLabel "conceptschema luchtzuiveringssysteem eigenschap"@nl.
+conceptscheme:lzss a skos:ConceptScheme;
+    skos:hasTopConcept lzss:onderhoud, lzss:operationeel, lzss:storing;
+    skos:prefLabel "conceptschema luchtzuiveringssysteem status"@nl.
+conceptscheme:lzsst a skos:ConceptScheme;
+    skos:hasTopConcept lzsst:in_gebruik, lzsst:leeg;
+    skos:prefLabel "conceptschema luchtzuiveringssysteem stalbezetting"@nl.
+conceptscheme:norm_bandbreedte a skos:ConceptScheme;
+    skos:altLabel "Ranges"@nl;
+    skos:hasTopConcept <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/1>, <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2>, <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3>, <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4>, <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5>, <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6>, <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7>, <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8>, <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9>;
+    skos:prefLabel "conceptschema luchtzuiveringssysteem normbandbreedte"@nl.

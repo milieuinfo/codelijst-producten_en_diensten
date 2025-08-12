@@ -1,0 +1,1241 @@
+{
+    "@context": {
+        "sparql-service-description-graph": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#graph",
+            "@type": "@id"
+        },
+        "defaultGraph": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#defaultGraph",
+            "@type": "@id"
+        },
+        "collections": {
+            "@type": "@id",
+            "@reverse": "member"
+        },
+        "id": "@id",
+        "type": {
+            "@id": "@type",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "source": {
+            "@id": "http://purl.org/dc/terms/source",
+            "@type": "@id"
+        },
+        "subject": {
+            "@id": "http://purl.org/dc/terms/subject",
+            "@type": "@id"
+        },
+        "sparql-service-description-name": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#name",
+            "@type": "@id"
+        },
+        "identifier": {
+            "@id": "http://purl.org/dc/terms/identifier",
+            "@type": "@id"
+        },
+        "hasVersion": {
+            "@id": "http://purl.org/dc/terms/hasVersion",
+            "@type": "@id"
+        },
+        "isVersionOf": {
+            "@id": "http://purl.org/dc/terms/isVersionOf",
+            "@type": "@id"
+        },
+        "label": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+            "@language": "nl"
+        },
+        "distribution": {
+            "@id": "http://www.w3.org/ns/dcat#distribution",
+            "@type": "@id"
+        },
+        "alternative": {
+            "@id": "http://purl.org/dc/terms/alternative",
+            "@language": "nl"
+        },
+        "description": {
+            "@id": "http://purl.org/dc/terms/description",
+            "@language": "nl"
+        },
+        "spatial": {
+            "@id": "http://purl.org/dc/terms/spatial",
+            "@type": "@id"
+        },
+        "page": {
+            "@id": "http://xmlns.com/foaf/0.1/page",
+            "@type": "@id"
+        },
+        "theme": {
+            "@id": "http://www.w3.org/ns/dcat#theme",
+            "@type": "@id"
+        },
+        "title": {
+            "@id": "http://purl.org/dc/terms/title",
+            "@language": "nl"
+        },
+        "landingPage": {
+            "@id": "http://www.w3.org/ns/dcat#landingPage",
+            "@type": "@id"
+        },
+        "rightsHolder": {
+            "@id": "http://purl.org/dc/terms/rightsHolder",
+            "@type": "@id"
+        },
+        "language": "http://publications.europa.eu/resource/authority/language/",
+        "accrualPeriodicity": {
+            "@id": "http://purl.org/dc/terms/accrualPeriodicity",
+            "@type": "@id"
+        },
+        "publisher": {
+            "@id": "http://purl.org/dc/terms/publisher",
+            "@type": "@id"
+        },
+        "dct.language": {
+            "@id": "http://purl.org/dc/terms/language",
+            "@type": "@id"
+        },
+        "contactPoint": {
+            "@id": "http://www.w3.org/ns/dcat#contactPoint",
+            "@type": "@id"
+        },
+        "temporal": {
+            "@id": "http://purl.org/dc/terms/temporal",
+            "@type": "@id"
+        },
+        "issued": {
+            "@id": "http://purl.org/dc/terms/issued",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "accessRights": {
+            "@id": "http://purl.org/dc/terms/accessRights",
+            "@type": "@id"
+        },
+        "license": {
+            "@id": "http://purl.org/dc/terms/license",
+            "@type": "@id"
+        },
+        "accessURL": {
+            "@id": "http://www.w3.org/ns/dcat#accessURL",
+            "@type": "@id"
+        },
+        "compressFormat": {
+            "@id": "http://www.w3.org/ns/dcat#compressFormat",
+            "@type": "@id"
+        },
+        "downloadURL": {
+            "@id": "http://www.w3.org/ns/dcat#downloadURL",
+            "@type": "@id"
+        },
+        "mediaType": {
+            "@id": "http://www.w3.org/ns/dcat#mediaType",
+            "@type": "@id"
+        },
+        "format": {
+            "@id": "http://purl.org/dc/terms/format",
+            "@type": "@id"
+        },
+        "versionInfo": {
+            "@id": "http://spdx.org/rdf/terms#versionInfo"
+        },
+        "packageName": {
+            "@id": "http://spdx.org/rdf/terms#packageName"
+        },
+        "packageFileName": {
+            "@id": "http://spdx.org/rdf/terms#packageFileName"
+        },
+        "downloadLocation": {
+            "@id": "http://spdx.org/rdf/terms#downloadLocation",
+            "@type": "@id"
+        },
+        "relationshipType_packageOf": {
+            "@id": "http://spdx.org/rdf/terms#relationshipType_packageOf",
+            "@type": "@id"
+        },
+        "availableGraphs": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#availableGraphs",
+            "@type": "@id"
+        },
+        "resultFormat": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#resultFormat",
+            "@type": "@id"
+        },
+        "feature": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#feature",
+            "@type": "@id"
+        },
+        "supportedLanguage": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#supportedLanguage",
+            "@type": "@id"
+        },
+        "url": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#url",
+            "@type": "@id"
+        },
+        "comment": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#comment",
+            "@language": "nl"
+        },
+        "defaultDataset": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#defaultDataset",
+            "@type": "@id"
+        },
+        "endpoint": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#endpoint",
+            "@type": "@id"
+        },
+        "namedGraph": {
+            "@id": "http://www.w3.org/ns/sparql-service-description#namedGraph",
+            "@type": "@id"
+        },
+        "homepage": {
+            "@id": "http://xmlns.com/foaf/0.1/homepage",
+            "@type": "@id"
+        },
+        "service": {
+            "@id": "http://www.w3.org/ns/dcat#service",
+            "@type": "@id"
+        },
+        "rootResource": {
+            "@id": "http://rdfs.org/ns/void#rootResource",
+            "@type": "@id"
+        },
+        "dataset": {
+            "@id": "http://www.w3.org/ns/dcat#dataset",
+            "@type": "@id"
+        },
+        "servesDataset": {
+            "@id": "http://www.w3.org/ns/dcat#servesDataset",
+            "@type": "@id"
+        },
+        "endpointDescription": {
+            "@id": "http://www.w3.org/ns/dcat#endpointDescription",
+            "@type": "@id"
+        },
+        "endpointURL": {
+            "@id": "http://www.w3.org/ns/dcat#endpointURL",
+            "@type": "@id"
+        },
+        "conformsTo": {
+            "@id": "http://purl.org/dc/terms/conformsTo",
+            "@type": "@id"
+        },
+        "dc.identifier": {
+            "@id": "http://purl.org/dc/elements/1.1/identifier"
+        },
+        "dc.language": {
+            "@id": "http://purl.org/dc/elements/1.1/language",
+            "@language": "nl"
+        },
+        "dc.source": {
+            "@id": "http://purl.org/dc/elements/1.1/source"
+        },
+        "version": {
+            "@id": "http://www.w3.org/2002/07/owl#versionInfo"
+        },
+        "name": {
+            "@id": "http://spdx.org/rdf/terms#name"
+        },
+        "seeAlso": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+            "@type": "@id"
+        },
+        "inScheme": {
+            "@id": "http://www.w3.org/2004/02/skos/core#inScheme",
+            "@type": "@id"
+        },
+        "topConceptOf": {
+            "@id": "http://www.w3.org/2004/02/skos/core#topConceptOf",
+            "@type": "@id"
+        },
+        "hasTopConcept": {
+            "@id": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "uri": {
+            "@id": "@id",
+            "@type": "@id"
+        },
+        "dct_type": {
+            "@id": "http://purl.org/dc/terms/type",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "operatie": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#operatie",
+            "@language": "nl"
+        },
+        "prefLabel": {
+            "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "@language": "nl"
+        },
+        "notation": {
+            "@id": "http://www.w3.org/2004/02/skos/core#notation"
+        },
+        "actie": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#actie",
+            "@language": "nl"
+        },
+        "normstatus": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#normstatus",
+            "@language": "nl"
+        },
+        "intervalcategorie": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#intervalcategorie"
+        },
+        "altLabel": {
+            "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+            "@language": "nl"
+        },
+        "note": {
+            "@id": "http://www.w3.org/2004/02/skos/core#note",
+            "@language": "nl"
+        },
+        "definition": {
+            "@id": "http://www.w3.org/2004/02/skos/core#definition",
+            "@language": "nl"
+        },
+        "member": {
+            "@id": "http://www.w3.org/2004/02/skos/core#member",
+            "@type": "@id"
+        },
+        "casNumber": {
+            "@id": "http://dbpedia.org/ontology/casNumber"
+        },
+        "references": {
+            "@id": "http://purl.org/dc/terms/references",
+            "@type": "@id"
+        },
+        "isReferencedBy": {
+            "@id": "http://purl.org/dc/terms/isReferencedBy",
+            "@type": "@id"
+        },
+        "relation": {
+            "@id": "http://purl.org/dc/terms/relation",
+            "@type": "@id"
+        },
+        "graph": {
+            "@id": "@graph"
+        },
+        "broaderTransitive": {
+            "@id": "http://www.w3.org/2004/02/skos/core#broaderTransitive",
+            "@type": "@id"
+        },
+        "broadMatch": {
+            "@id": "http://www.w3.org/2004/02/skos/core#broadMatch",
+            "@type": "@id"
+        },
+        "closeMatch": {
+            "@id": "http://www.w3.org/2004/02/skos/core#closeMatch",
+            "@type": "@id"
+        },
+        "exactMatch": {
+            "@id": "http://www.w3.org/2004/02/skos/core#exactMatch",
+            "@type": "@id"
+        },
+        "mappingRelation": {
+            "@id": "http://www.w3.org/2004/02/skos/core#mappingRelation",
+            "@type": "@id"
+        },
+        "broader": {
+            "@id": "http://www.w3.org/2004/02/skos/core#broader",
+            "@type": "@id"
+        },
+        "narrower": {
+            "@id": "http://www.w3.org/2004/02/skos/core#narrower",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "narrowerTransitive": {
+            "@id": "http://www.w3.org/2004/02/skos/core#narrowerTransitive",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "narrowMatch": {
+            "@id": "http://www.w3.org/2004/02/skos/core#narrowMatch",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "semanticRelation": {
+            "@id": "http://www.w3.org/2004/02/skos/core#semanticRelation",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "belongsTo": {
+            "@id": "http://rdf-vocabulary.ddialliance.org/xkos#belongsTo",
+            "@type": "@id"
+        },
+        "value": {
+            "@id": "https://schema.org/value",
+            "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "minValue": {
+            "@id": "https://schema.org/minValue",
+            "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "maxValue": {
+            "@id": "https://schema.org/maxValue",
+            "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "related": {
+            "@id": "http://www.w3.org/2004/02/skos/core#related",
+            "@type": "@id"
+        },
+        "dc_elements_identifier": {
+            "@id": "http://purl.org/dc/elements/1.1/identifier"
+        },
+        "variabele": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#variabele",
+            "@type": "@id"
+        },
+        "drager": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#drager",
+            "@type": "@id"
+        },
+        "waardebepaling": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#waardebepaling",
+            "@type": "@id"
+        },
+        "applicableUnit": {
+            "@id": "http://qudt.org/schema/qudt/applicableUnit",
+            "@type": "@id"
+        },
+        "severity": {
+            "@id": "http://www.w3.org/ns/shacl#severity",
+            "@type": "@id"
+        },
+        "relevantUnit": {
+            "@id": "http://qudt.org/schema/qudt/relevantUnit",
+            "@type": "@id"
+        },
+        "relevantQuantityKind": {
+            "@id": "http://qudt.org/schema/qudt/relevantQuantityKind",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "hasProcedureForProperty": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#hasProcedureForProperty",
+            "@type": "@id"
+        },
+        "relevantSystem": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#relevantSystem",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "relevantCodeList": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#relevantCodeList",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "relevantDataType": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#relevantDataType",
+            "@type": "@id"
+        },
+        "relevantProperty": {
+            "@id": "https://data.omgeving.vlaanderen.be/ns/lzs#relevantProperty",
+            "@type": "@id"
+        },
+        "concept": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/property/",
+        "collectie": "https://data.omgeving.vlaanderen.be/id/collection/producten_en_diensten/",
+        "access_right": "http://publications.europa.eu/resource/authority/access-right/",
+        "adms": "http://www.w3.org/ns/adms#",
+        "assettype": "http://purl.org/adms/assettype/",
+        "conceptscheme": "https://data.omgeving.vlaanderen.be/id/conceptscheme/",
+        "country": "http://publications.europa.eu/resource/authority/country/",
+        "datasets": "https://datasets.omgeving.vlaanderen.be/",
+        "datatheme_be": "http://vocab.belgif.be/auth/datatheme/",
+        "datatheme_eu": "http://publications.europa.eu/resource/authority/data-theme/",
+        "dbo": "http://dbpedia.org/ontology/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "dct": "http://purl.org/dc/terms/",
+        "eurovoc": "http://eurovoc.europa.eu/",
+        "file_type": "http://publications.europa.eu/resource/authority/file-type/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "formats": "http://www.w3.org/ns/formats/",
+        "frequency": "http://publications.europa.eu/resource/authority/frequency/",
+        "gemet": "http://www.eionet.europa.eu/gemet/concept/",
+        "schema": "https://schema.org/",
+        "licence": "http://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/",
+        "metadata": "https://data.omgeving.vlaanderen.be/ns/metadata#",
+        "omg_catalog": "https://data.omgeving.vlaanderen.be/id/catalog/",
+        "omg_catalog_doc": "https://data.omgeving.vlaanderen.be/doc/catalog/",
+        "omg_collection": "https://data.omgeving.vlaanderen.be/id/collection/",
+        "omg_dataservice": "https://data.omgeving.vlaanderen.be/id/dataservice/",
+        "omg_dataset_doc": "https://data.omgeving.vlaanderen.be/doc/dataset/",
+        "omg_dataset": "https://data.omgeving.vlaanderen.be/id/dataset/",
+        "omg_distribution_doc": "https://data.omgeving.vlaanderen.be/doc/distribution/",
+        "omg_distribution": "https://data.omgeving.vlaanderen.be/id/distribution/",
+        "omg_graphcollection": "https://data.omgeving.vlaanderen.be/id/graphcollection/",
+        "omg_graph": "https://data.omgeving.vlaanderen.be/id/graph/",
+        "omg_id": "https://data.omgeving.vlaanderen.be/id/",
+        "omg_named_graph": "https://data.omgeving.vlaanderen.be/id/namedgraph/",
+        "omg_ontology": "https://data.omgeving.vlaanderen.be/id/ontology/",
+        "omg_package": "https://data.omgeving.vlaanderen.be/id/package/",
+        "omg_periodoftime": "https://data.omgeving.vlaanderen.be/id/periodoftime/",
+        "omg_service": "https://data.omgeving.vlaanderen.be/id/service/",
+        "omg_vcard": "https://data.omgeving.vlaanderen.be/id/vcard/",
+        "ovo": "http://data.vlaanderen.be/id/organisatie/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "repo": "https://repo.omgeving.vlaanderen.be/artifactory/release/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "sd": "http://www.w3.org/ns/sparql-service-description#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "spdx": "http://spdx.org/rdf/terms#",
+        "ssd": "http://www.w3.org/ns/sparql-service-description#",
+        "ts": "http://www.w3.org/ns/formats/",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "void": "http://rdfs.org/ns/void#",
+        "wise": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty/",
+        "xkos": "http://rdf-vocabulary.ddialliance.org/xkos#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "wb": "https://data.omgeving.vlaanderen.be/id/concept/waardebepaling/",
+        "normatieve_structuur": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/normatieve_structuur/",
+        "lzp": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/property/",
+        "lzs-type": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/",
+        "lzs-norm": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/",
+        "lzss": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/status/",
+        "lzsst": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/stalgebruik/",
+        "lzsm": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/",
+        "lzsp": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/",
+        "dr": "https://data.omgeving.vlaanderen.be/id/concept/drager/",
+        "lzsns": "https://data.omgeving.vlaanderen.be/ns/lzs#",
+        "qudt": "http://qudt.org/schema/qudt/",
+        "unit": "http://qudt.org/vocab/unit/",
+        "sh": "http://www.w3.org/ns/shacl#",
+        "quantitykind": "http://qudt.org/vocab/quantitykind/",
+        "ssn": "http://www.w3.org/ns/ssn/",
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "procedure": "https://data.omgeving.vlaanderen.be/id/concept/observatieprocedure/",
+        "@base": "https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/property/"
+    },
+    "graph": [
+        {
+            "id": "quantitykind:Acidity",
+            "type": [
+                "qudt:QuantityKind"
+            ],
+            "applicableUnit": "unit:PH"
+        },
+        {
+            "id": "quantitykind:Basicity",
+            "type": [
+                "qudt:QuantityKind"
+            ],
+            "applicableUnit": "unit:PH"
+        },
+        {
+            "id": "quantitykind:Conductivity",
+            "type": [
+                "qudt:QuantityKind"
+            ],
+            "applicableUnit": "unit:MilliS-PER-CentiM"
+        },
+        {
+            "id": "quantitykind:Count",
+            "type": [
+                "qudt:QuantityKind"
+            ],
+            "applicableUnit": "unit:NUM"
+        },
+        {
+            "id": "quantitykind:Fugacity",
+            "type": [
+                "qudt:QuantityKind"
+            ],
+            "applicableUnit": "unit:PA"
+        },
+        {
+            "id": "quantitykind:VaporPressure",
+            "type": [
+                "qudt:QuantityKind"
+            ],
+            "applicableUnit": "unit:PA"
+        },
+        {
+            "id": "quantitykind:Volume",
+            "type": [
+                "qudt:QuantityKind"
+            ],
+            "applicableUnit": "unit:M3"
+        },
+        {
+            "id": "quantitykind:VolumeFlowRate",
+            "type": [
+                "qudt:QuantityKind"
+            ],
+            "applicableUnit": "unit:M3-PER-HR"
+        },
+        {
+            "id": "quantitykind:VolumePerTime",
+            "type": [
+                "qudt:QuantityKind"
+            ],
+            "applicableUnit": "unit:M3-PER-HR"
+        },
+        {
+            "id": "lzsp:biobedspoelwaterproductie",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:waswater",
+            "dct_type": [
+                "lzs-type:s3"
+            ],
+            "relevantQuantityKind": [
+                "quantitykind:Volume"
+            ],
+            "relevantUnit": "unit:M3",
+            "seeAlso": "omg_id:concept/fysico-chemisch/0053",
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "Biobedspoelwaterproductie",
+            "topConceptOf": "conceptscheme:lzsp",
+            "relevantDataType": "xsd:decimal"
+        },
+        {
+            "id": "lzsp:biobedspuiwaterproductie",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:spuiwater",
+            "dct_type": [
+                "lzs-type:s3"
+            ],
+            "relevantQuantityKind": [
+                "quantitykind:Volume"
+            ],
+            "relevantUnit": "unit:M3",
+            "seeAlso": "omg_id:concept/fysico-chemisch/0050",
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "Biobedspuiwaterproductie",
+            "topConceptOf": "conceptscheme:lzsp",
+            "relevantDataType": "xsd:decimal"
+        },
+        {
+            "id": "lzsp:drukvaloverhetsysteem",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:lucht",
+            "dct_type": [
+                "lzs-type:s3",
+                "lzs-type:s1",
+                "lzs-type:s2"
+            ],
+            "relevantQuantityKind": [
+                "quantitykind:Fugacity",
+                "quantitykind:VaporPressure"
+            ],
+            "relevantUnit": "unit:PA",
+            "seeAlso": "omg_id:concept/fysico-chemisch/0329",
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "Drukval over het systeem",
+            "topConceptOf": "conceptscheme:lzsp",
+            "relevantDataType": "xsd:decimal"
+        },
+        {
+            "id": "lzsp:geleidbaarheidvanhetwaswater",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:waswater",
+            "dct_type": [
+                "lzs-type:s1",
+                "lzs-type:s2"
+            ],
+            "relevantQuantityKind": [
+                "quantitykind:Conductivity"
+            ],
+            "relevantUnit": "unit:MilliS-PER-CentiM",
+            "seeAlso": "omg_id:concept/fysico-chemisch/0010",
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "Geleidbaarheid van het waswater",
+            "topConceptOf": "conceptscheme:lzsp",
+            "hasProcedureForProperty": "procedure:WAC_I_A_011",
+            "relevantDataType": "xsd:decimal"
+        },
+        {
+            "id": "lzsp:spuiwaterproductie",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:spuiwater",
+            "dct_type": [
+                "lzs-type:s1",
+                "lzs-type:s2"
+            ],
+            "relevantQuantityKind": [
+                "quantitykind:Volume"
+            ],
+            "relevantUnit": "unit:M3",
+            "seeAlso": "omg_id:concept/fysico-chemisch/0050",
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "Spuiwaterproductie",
+            "topConceptOf": "conceptscheme:lzsp",
+            "relevantDataType": "xsd:decimal"
+        },
+        {
+            "id": "lzsp:stalbezetting",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:stal",
+            "dct_type": [
+                "lzs-type:s3",
+                "lzs-type:s1",
+                "lzs-type:s2"
+            ],
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "Stalbezetting",
+            "topConceptOf": "conceptscheme:lzsp",
+            "relevantCodeList": [
+                "conceptscheme:lzsst"
+            ]
+        },
+        {
+            "id": "lzsp:systeemstatus",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:hetelektronischmonitoringssysteem",
+            "dct_type": [
+                "lzs-type:s3",
+                "lzs-type:s1",
+                "lzs-type:s2"
+            ],
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "SysteemStatus",
+            "topConceptOf": "conceptscheme:lzsp",
+            "relevantCodeList": [
+                "conceptscheme:lzss"
+            ]
+        },
+        {
+            "id": "lzsp:waswaterdebiet",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:waswater",
+            "dct_type": [
+                "lzs-type:s1",
+                "lzs-type:s2"
+            ],
+            "relevantQuantityKind": [
+                "quantitykind:VolumeFlowRate",
+                "quantitykind:VolumePerTime"
+            ],
+            "relevantUnit": "unit:M3-PER-HR",
+            "seeAlso": "omg_id:concept/fysico-chemisch/0053",
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "Waswaterdebiet over het waspakket",
+            "topConceptOf": "conceptscheme:lzsp",
+            "relevantDataType": "xsd:decimal"
+        },
+        {
+            "id": "lzsp:waswaterdebietbevloeiing",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:waswater",
+            "dct_type": [
+                "lzs-type:s3"
+            ],
+            "relevantQuantityKind": [
+                "quantitykind:VolumeFlowRate",
+                "quantitykind:VolumePerTime"
+            ],
+            "relevantUnit": "unit:M3-PER-HR",
+            "seeAlso": "omg_id:concept/fysico-chemisch/0053",
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "Waswaterdebiet van de bevloeiing van het vulmateriaal",
+            "topConceptOf": "conceptscheme:lzsp",
+            "relevantDataType": "xsd:decimal"
+        },
+        {
+            "id": "lzsp:waswaterdebietvoorbevochtiging",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:waswater",
+            "dct_type": [
+                "lzs-type:s3"
+            ],
+            "relevantQuantityKind": [
+                "quantitykind:VolumeFlowRate",
+                "quantitykind:VolumePerTime"
+            ],
+            "relevantUnit": "unit:M3-PER-HR",
+            "seeAlso": "omg_id:concept/fysico-chemisch/0053",
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "Waswaterdebiet van de voorbevochtiging van de ingaande stallucht",
+            "topConceptOf": "conceptscheme:lzsp",
+            "relevantDataType": "xsd:decimal"
+        },
+        {
+            "id": "lzsp:zuurtegraadwaswater",
+            "type": [
+                "skos:Concept",
+                "ssn:Property"
+            ],
+            "subject": "lzsm:waswater",
+            "dct_type": [
+                "lzs-type:s1",
+                "lzs-type:s2"
+            ],
+            "relevantQuantityKind": [
+                "quantitykind:Acidity",
+                "quantitykind:Basicity"
+            ],
+            "relevantUnit": "unit:PH",
+            "seeAlso": "omg_id:concept/fysico-chemisch/0076",
+            "inScheme": "conceptscheme:lzsp",
+            "prefLabel": "Zuurtegraad van het waswater",
+            "topConceptOf": "conceptscheme:lzsp",
+            "hasProcedureForProperty": "procedure:WAC_I_A_011",
+            "relevantDataType": "xsd:decimal"
+        },
+        {
+            "id": "lzs-type:luchtwassysteem",
+            "type": [
+                "skos:Concept"
+            ],
+            "broader": "lzs-type:luchtzuiveringssysteem",
+            "broaderTransitive": "lzs-type:luchtzuiveringssysteem",
+            "inScheme": "conceptscheme:lzs",
+            "narrower": [
+                "lzs-type:s1",
+                "lzs-type:s2"
+            ],
+            "narrowerTransitive": [
+                "lzs-type:s1",
+                "lzs-type:s2"
+            ],
+            "prefLabel": "Luchtwassysteem",
+            "semanticRelation": [
+                "lzs-type:s1",
+                "lzs-type:s2",
+                "lzs-type:luchtzuiveringssysteem"
+            ]
+        },
+        {
+            "id": "lzs-type:luchtzuiveringssysteem",
+            "type": [
+                "skos:Concept"
+            ],
+            "inScheme": "conceptscheme:lzs",
+            "narrower": [
+                "lzs-type:s3",
+                "lzs-type:luchtwassysteem"
+            ],
+            "narrowerTransitive": [
+                "lzs-type:s3",
+                "lzs-type:s1",
+                "lzs-type:s2",
+                "lzs-type:luchtwassysteem"
+            ],
+            "prefLabel": "Luchtzuiveringssysteem",
+            "semanticRelation": [
+                "lzs-type:s3",
+                "lzs-type:s1",
+                "lzs-type:s2",
+                "lzs-type:luchtwassysteem"
+            ],
+            "topConceptOf": "conceptscheme:lzs"
+        },
+        {
+            "id": "lzsm:hetelektronischmonitoringssysteem",
+            "type": [
+                "skos:Concept",
+                "rdfs:Resource"
+            ],
+            "inScheme": "conceptscheme:lzsm",
+            "prefLabel": "Het elektronisch monitoringssysteem",
+            "topConceptOf": "conceptscheme:lzsm"
+        },
+        {
+            "id": "lzsm:lucht",
+            "type": [
+                "skos:Concept",
+                "rdfs:Resource"
+            ],
+            "inScheme": "conceptscheme:lzsm",
+            "prefLabel": "Lucht",
+            "topConceptOf": "conceptscheme:lzsm"
+        },
+        {
+            "id": "lzsm:spuiwater",
+            "type": [
+                "skos:Concept",
+                "rdfs:Resource"
+            ],
+            "inScheme": "conceptscheme:lzsm",
+            "prefLabel": "Spuiwater",
+            "topConceptOf": "conceptscheme:lzsm"
+        },
+        {
+            "id": "lzsm:stal",
+            "type": [
+                "skos:Concept",
+                "rdfs:Resource"
+            ],
+            "inScheme": "conceptscheme:lzsm",
+            "prefLabel": "Stal",
+            "topConceptOf": "conceptscheme:lzsm"
+        },
+        {
+            "id": "lzsm:waswater",
+            "type": [
+                "skos:Concept",
+                "rdfs:Resource"
+            ],
+            "inScheme": "conceptscheme:lzsm",
+            "prefLabel": "Waswater",
+            "topConceptOf": "conceptscheme:lzsm"
+        },
+        {
+            "id": "lzs-norm:1",
+            "type": [
+                "skos:Concept"
+            ],
+            "dct_type": [
+                "lzs-type:s1"
+            ],
+            "definition": "Onder de minimum grenswaarde van 6",
+            "inScheme": "conceptscheme:norm_bandbreedte",
+            "note": "Onder de minimum grenswaarde van 6",
+            "prefLabel": "Zuurtegraad waswater < 6",
+            "topConceptOf": "conceptscheme:norm_bandbreedte",
+            "relevantProperty": "lzsp:zuurtegraadwaswater",
+            "maxValue": "6.0"
+        },
+        {
+            "id": "lzs-norm:2",
+            "type": [
+                "skos:Concept"
+            ],
+            "dct_type": [
+                "lzs-type:s1"
+            ],
+            "definition": "Boven de maximum grenswaarde van 8,5",
+            "inScheme": "conceptscheme:norm_bandbreedte",
+            "note": "Boven de maximum grenswaarde van 8,5",
+            "prefLabel": "Zuurtegraad waswater > 8,5",
+            "topConceptOf": "conceptscheme:norm_bandbreedte",
+            "relevantProperty": "lzsp:zuurtegraadwaswater",
+            "minValue": "8.5"
+        },
+        {
+            "id": "lzs-norm:3",
+            "type": [
+                "skos:Concept"
+            ],
+            "dct_type": [
+                "lzs-type:s1"
+            ],
+            "definition": "Boven de maximale waarde op technische fiche",
+            "inScheme": "conceptscheme:norm_bandbreedte",
+            "note": "Boven de maximale waarde op technische fiche",
+            "prefLabel": "Geleidbaarheid > maximum operationele waarde",
+            "topConceptOf": "conceptscheme:norm_bandbreedte",
+            "operatie": "som",
+            "relevantProperty": "lzsp:geleidbaarheidvanhetwaswater",
+            "minValue": "0.0"
+        },
+        {
+            "id": "lzs-norm:4",
+            "type": [
+                "skos:Concept"
+            ],
+            "dct_type": [
+                "lzs-type:s1"
+            ],
+            "definition": "Onder de minimum grenswaarde, een afwijking > 20% t.o.v referentiewaarde technische fiche",
+            "inScheme": "conceptscheme:norm_bandbreedte",
+            "note": "Onder de minimum grenswaarde, een afwijking > 20% t.o.v referentiewaarde technische fiche",
+            "prefLabel": "Waswaterdebiet afwijking > 20% onder normale operationele waarde",
+            "topConceptOf": "conceptscheme:norm_bandbreedte",
+            "operatie": "product",
+            "relevantProperty": "lzsp:waswaterdebiet",
+            "maxValue": "0.8"
+        },
+        {
+            "id": "lzs-norm:5",
+            "type": [
+                "skos:Concept"
+            ],
+            "dct_type": [
+                "lzs-type:s1"
+            ],
+            "definition": "Onder de minimum grenswaarde, een afwijking > 10% t.o.v referentiewaarde technische fiche",
+            "inScheme": "conceptscheme:norm_bandbreedte",
+            "note": "Onder de minimum grenswaarde, een afwijking > 10% t.o.v referentiewaarde technische fiche",
+            "prefLabel": "Spuiwaterproductie afwijking > 10% normale operationele waarde",
+            "topConceptOf": "conceptscheme:norm_bandbreedte",
+            "operatie": "product",
+            "relevantProperty": "lzsp:spuiwaterproductie",
+            "maxValue": "0.9"
+        },
+        {
+            "id": "lzs-norm:6",
+            "type": [
+                "skos:Concept"
+            ],
+            "dct_type": [
+                "lzs-type:s1"
+            ],
+            "definition": "Onder de minimum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche",
+            "inScheme": "conceptscheme:norm_bandbreedte",
+            "note": "Onder de minimum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche",
+            "prefLabel": "Drukval afwijking > 40% onder normale operationele waarde",
+            "topConceptOf": "conceptscheme:norm_bandbreedte",
+            "operatie": "product",
+            "relevantProperty": "lzsp:drukvaloverhetsysteem",
+            "maxValue": "0.6"
+        },
+        {
+            "id": "lzs-norm:7",
+            "type": [
+                "skos:Concept"
+            ],
+            "dct_type": [
+                "lzs-type:s1"
+            ],
+            "definition": "Boven de maximum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche",
+            "inScheme": "conceptscheme:norm_bandbreedte",
+            "note": "Boven de maximum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche",
+            "prefLabel": "Drukval afwijking > 40% normale operationele waarde",
+            "topConceptOf": "conceptscheme:norm_bandbreedte",
+            "operatie": "product",
+            "relevantProperty": "lzsp:drukvaloverhetsysteem",
+            "minValue": "1.4"
+        },
+        {
+            "id": "lzs-norm:8",
+            "type": [
+                "skos:Concept"
+            ],
+            "dct_type": [
+                "lzs-type:s2"
+            ],
+            "definition": "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 1 pH)",
+            "inScheme": "conceptscheme:norm_bandbreedte",
+            "note": "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 1 pH)",
+            "prefLabel": "Zuurtegraad waswater afwijking > 1 pH-eenheid boven normale operationele waarde",
+            "topConceptOf": "conceptscheme:norm_bandbreedte",
+            "operatie": "som",
+            "relevantProperty": "lzsp:zuurtegraadwaswater",
+            "minValue": "1.0"
+        },
+        {
+            "id": "lzs-norm:9",
+            "type": [
+                "skos:Concept"
+            ],
+            "dct_type": [
+                "lzs-type:s3"
+            ],
+            "definition": "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 50 Pa)",
+            "inScheme": "conceptscheme:norm_bandbreedte",
+            "note": "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 50 Pa)",
+            "prefLabel": "Bandbreedte drukval afwijking > 50 Pa boven normale operationele waarde",
+            "topConceptOf": "conceptscheme:norm_bandbreedte",
+            "operatie": "som",
+            "relevantProperty": "lzsp:drukvaloverhetsysteem",
+            "minValue": "50.0"
+        },
+        {
+            "id": "lzs-type:s1",
+            "type": [
+                "skos:Concept"
+            ],
+            "broader": "lzs-type:luchtwassysteem",
+            "broaderTransitive": [
+                "lzs-type:luchtwassysteem",
+                "lzs-type:luchtzuiveringssysteem"
+            ],
+            "inScheme": "conceptscheme:lzs",
+            "notation": "S1",
+            "prefLabel": "Biologisch luchtwassysteem",
+            "semanticRelation": [
+                "lzs-type:luchtwassysteem",
+                "lzs-type:luchtzuiveringssysteem"
+            ]
+        },
+        {
+            "id": "lzs-type:s2",
+            "type": [
+                "skos:Concept"
+            ],
+            "broader": "lzs-type:luchtwassysteem",
+            "broaderTransitive": [
+                "lzs-type:luchtwassysteem",
+                "lzs-type:luchtzuiveringssysteem"
+            ],
+            "inScheme": "conceptscheme:lzs",
+            "notation": "S2",
+            "prefLabel": "Chemisch luchtwassysteem",
+            "semanticRelation": [
+                "lzs-type:luchtwassysteem",
+                "lzs-type:luchtzuiveringssysteem"
+            ]
+        },
+        {
+            "id": "lzs-type:s3",
+            "type": [
+                "skos:Concept"
+            ],
+            "broader": "lzs-type:luchtzuiveringssysteem",
+            "broaderTransitive": "lzs-type:luchtzuiveringssysteem",
+            "inScheme": "conceptscheme:lzs",
+            "notation": "S3",
+            "prefLabel": "Biobed",
+            "semanticRelation": [
+                "lzs-type:luchtzuiveringssysteem"
+            ]
+        },
+        {
+            "id": "lzsst:in_gebruik",
+            "type": [
+                "skos:Concept"
+            ],
+            "inScheme": "conceptscheme:lzsst",
+            "prefLabel": "Stal in gebruik, dieren aanwezig.",
+            "topConceptOf": "conceptscheme:lzsst"
+        },
+        {
+            "id": "lzsst:leeg",
+            "type": [
+                "skos:Concept"
+            ],
+            "inScheme": "conceptscheme:lzsst",
+            "prefLabel": "Lege stal",
+            "topConceptOf": "conceptscheme:lzsst"
+        },
+        {
+            "id": "lzss:onderhoud",
+            "type": [
+                "skos:Concept"
+            ],
+            "inScheme": "conceptscheme:lzss",
+            "prefLabel": "In onderhoud",
+            "topConceptOf": "conceptscheme:lzss"
+        },
+        {
+            "id": "lzss:operationeel",
+            "type": [
+                "skos:Concept"
+            ],
+            "inScheme": "conceptscheme:lzss",
+            "prefLabel": "Operationeel",
+            "topConceptOf": "conceptscheme:lzss"
+        },
+        {
+            "id": "lzss:storing",
+            "type": [
+                "skos:Concept"
+            ],
+            "inScheme": "conceptscheme:lzss",
+            "prefLabel": "Storing",
+            "topConceptOf": "conceptscheme:lzss"
+        },
+        {
+            "id": "conceptscheme:lzs",
+            "type": [
+                "skos:ConceptScheme"
+            ],
+            "hasTopConcept": [
+                "lzs-type:luchtzuiveringssysteem"
+            ],
+            "prefLabel": "conceptschema luchtzuiveringssysteem"
+        },
+        {
+            "id": "conceptscheme:lzsm",
+            "type": [
+                "skos:ConceptScheme"
+            ],
+            "hasTopConcept": [
+                "lzsm:waswater",
+                "lzsm:spuiwater",
+                "lzsm:lucht",
+                "lzsm:stal",
+                "lzsm:hetelektronischmonitoringssysteem"
+            ],
+            "prefLabel": "conceptschema luchtzuiveringssysteem medium"
+        },
+        {
+            "id": "conceptscheme:lzsp",
+            "type": [
+                "skos:ConceptScheme"
+            ],
+            "hasTopConcept": [
+                "lzsp:biobedspoelwaterproductie",
+                "lzsp:biobedspuiwaterproductie",
+                "lzsp:drukvaloverhetsysteem",
+                "lzsp:geleidbaarheidvanhetwaswater",
+                "lzsp:spuiwaterproductie",
+                "lzsp:stalbezetting",
+                "lzsp:systeemstatus",
+                "lzsp:waswaterdebiet",
+                "lzsp:waswaterdebietbevloeiing",
+                "lzsp:waswaterdebietvoorbevochtiging",
+                "lzsp:zuurtegraadwaswater"
+            ],
+            "prefLabel": "conceptschema luchtzuiveringssysteem eigenschap"
+        },
+        {
+            "id": "conceptscheme:lzss",
+            "type": [
+                "skos:ConceptScheme"
+            ],
+            "hasTopConcept": [
+                "lzss:onderhoud",
+                "lzss:operationeel",
+                "lzss:storing"
+            ],
+            "prefLabel": "conceptschema luchtzuiveringssysteem status"
+        },
+        {
+            "id": "conceptscheme:lzsst",
+            "type": [
+                "skos:ConceptScheme"
+            ],
+            "hasTopConcept": [
+                "lzsst:in_gebruik",
+                "lzsst:leeg"
+            ],
+            "prefLabel": "conceptschema luchtzuiveringssysteem stalbezetting"
+        },
+        {
+            "id": "conceptscheme:norm_bandbreedte",
+            "type": [
+                "skos:ConceptScheme"
+            ],
+            "altLabel": "Ranges",
+            "hasTopConcept": [
+                "lzs-norm:1",
+                "lzs-norm:2",
+                "lzs-norm:3",
+                "lzs-norm:4",
+                "lzs-norm:5",
+                "lzs-norm:6",
+                "lzs-norm:7",
+                "lzs-norm:8",
+                "lzs-norm:9"
+            ],
+            "prefLabel": "conceptschema luchtzuiveringssysteem normbandbreedte"
+        }
+    ]
+}
