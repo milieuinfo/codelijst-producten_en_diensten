@@ -95,6 +95,10 @@ metadata :
       mediaType: https://www.iana.org/assignments/media-types/application/n-triples
       format: http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES
       type: http://www.w3.org/ns/dcat#Distribution
+    json:
+      mediaType: https://www.iana.org/assignments/media-types/application/json
+      format: http://publications.europa.eu/resource/authority/file-type/JSON
+      type: http://www.w3.org/ns/dcat#Distribution
     ttl:
       mediaType: https://www.iana.org/assignments/media-types/text/turtle
       format: http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE
