@@ -2,7 +2,7 @@
 import yaml from 'js-yaml';
 import fs, {readFileSync} from "fs";
 import rdf from "@zazuko/env-node";
-import {metadataOptions, shapes_dcat, dcat_rules} from "maven-metadata-generator-npm/src/utils/variables.js";
+import {metadataOptions, shapes_dcat, dcat_rules, frame_catalog} from "maven-metadata-generator-npm/src/utils/variables.js";
 
 
 const config = yaml.load(fs.readFileSync('./source/config.yml', 'utf8'));
@@ -302,9 +302,9 @@ const frame_skos_no_prefixes = {
     }
 }
 
-const urn = ('urn:' + metadataOptions.groupId + ':' + metadataOptions.artifactId);
 
-const xsdOptions = {"file": config.skos.path + config.skos.name + '/' + config.skos.name + config.skos.xsd, "urn": urn}
+
+const xsdOptions = {"file": config.skos.path + config.skos.name + '/' + config.skos.name + config.skos.xsd, "urn": ('urn:' + metadataOptions.groupId + ':' + metadataOptions.artifactId)}
 
 const turtlePath = config.skos.path + config.skos.name + '/' + config.skos.name + config.skos.turtle
 
@@ -336,12 +336,12 @@ const dcat_catalog_turtle = '../temp/' + config.dcat.path_catalog + metadataOpti
 
 const datasetOptions = {
     "turtlePath": dcat_dataset_turtle,
-    "jsonldOptions": {"file": dcat_dataset_jsonld, "frame": metadataOptions.frame_catalog}
+    "jsonldOptions": {"file": dcat_dataset_jsonld, "frame": frame_catalog}
 }
 
 const catalogOptions = {
     "turtlePath": dcat_catalog_turtle,
-    "jsonldOptions": {"file": dcat_catalog_jsonld, "frame": metadataOptions.frame_catalog}
+    "jsonldOptions": {"file": dcat_catalog_jsonld, "frame": frame_catalog}
 }
 
 const skosOptions = {
@@ -378,6 +378,5 @@ export {
     metadataSource,
     metadataOptions,
     datasetOptions,
-    catalogOptions,
-    urn
+    catalogOptions
 };
