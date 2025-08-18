@@ -1,7 +1,10 @@
 'use strict';
 import { generate_skos } from 'maven-metadata-generator-npm';
 import {
-    options
+    skosOptions,
+    skosSource
 } from './utils/variables.js';
 
-generate_skos(options);
+
+generate_skos(skosOptions, skosSource);
+
