@@ -26,7 +26,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspoelwaterproductie> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspoelwaterproductie> <http://www.w3.org/2004/02/skos/core#prefLabel> "Biobedspoelwaterproductie"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspoelwaterproductie> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspoelwaterproductie> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspoelwaterproductie> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspuiwaterproductie> <http://purl.org/dc/terms/subject> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/spuiwater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspuiwaterproductie> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspuiwaterproductie> <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/Volume> .
@@ -37,7 +37,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspuiwaterproductie> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspuiwaterproductie> <http://www.w3.org/2004/02/skos/core#prefLabel> "Biobedspuiwaterproductie"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspuiwaterproductie> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspuiwaterproductie> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/biobedspuiwaterproductie> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> <http://purl.org/dc/terms/subject> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/lucht> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2> .
@@ -51,7 +51,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drukval over het systeem"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> <http://purl.org/dc/terms/subject> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2> .
@@ -63,8 +63,8 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geleidbaarheid van het waswater"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> <https://data.omgeving.vlaanderen.be/ns/lzs#hasProcedureForProperty> <https://data.omgeving.vlaanderen.be/id/concept/observatieprocedure/WAC_I_A_011> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#hasProcedureForProperty> <https://data.omgeving.vlaanderen.be/id/concept/observatieprocedure/WAC_I_A_011> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie> <http://purl.org/dc/terms/subject> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/spuiwater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2> .
@@ -76,7 +76,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie> <http://www.w3.org/2004/02/skos/core#prefLabel> "Spuiwaterproductie"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/stalbezetting> <http://purl.org/dc/terms/subject> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/stal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/stalbezetting> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/stalbezetting> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2> .
@@ -86,7 +86,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/stalbezetting> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/stalbezetting> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stalbezetting"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/stalbezetting> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/stalbezetting> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantCodeList> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsst> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/stalbezetting> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantCodeList> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsst> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/systeemstatus> <http://purl.org/dc/terms/subject> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/hetelektronischmonitoringssysteem> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/systeemstatus> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/systeemstatus> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2> .
@@ -96,7 +96,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/systeemstatus> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/systeemstatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "SysteemStatus"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/systeemstatus> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/systeemstatus> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantCodeList> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzss> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/systeemstatus> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantCodeList> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzss> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet> <http://purl.org/dc/terms/subject> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2> .
@@ -109,7 +109,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet> <http://www.w3.org/2004/02/skos/core#prefLabel> "Waswaterdebiet over het waspakket"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietbevloeiing> <http://purl.org/dc/terms/subject> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietbevloeiing> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietbevloeiing> <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VolumeFlowRate> .
@@ -121,7 +121,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietbevloeiing> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietbevloeiing> <http://www.w3.org/2004/02/skos/core#prefLabel> "Waswaterdebiet van de bevloeiing van het vulmateriaal"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietbevloeiing> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietbevloeiing> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietbevloeiing> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietvoorbevochtiging> <http://purl.org/dc/terms/subject> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietvoorbevochtiging> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietvoorbevochtiging> <http://qudt.org/schema/qudt/relevantQuantityKind> <http://qudt.org/vocab/quantitykind/VolumeFlowRate> .
@@ -133,7 +133,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietvoorbevochtiging> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietvoorbevochtiging> <http://www.w3.org/2004/02/skos/core#prefLabel> "Waswaterdebiet van de voorbevochtiging van de ingaande stallucht"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietvoorbevochtiging> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietvoorbevochtiging> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebietvoorbevochtiging> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> <http://purl.org/dc/terms/subject> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/waswater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2> .
@@ -146,8 +146,8 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zuurtegraad van het waswater"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/lzsp> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> <https://data.omgeving.vlaanderen.be/ns/lzs#hasProcedureForProperty> <https://data.omgeving.vlaanderen.be/id/concept/observatieprocedure/WAC_I_A_011> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#hasProcedureForProperty> <https://data.omgeving.vlaanderen.be/id/concept/observatieprocedure/WAC_I_A_011> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem> <http://www.w3.org/2004/02/skos/core#broader> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtzuiveringssysteem> .
@@ -206,7 +206,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/1> <http://www.w3.org/2004/02/skos/core#note> "Onder de minimum grenswaarde van 6"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/1> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zuurtegraad waswater < 6"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/1> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/1> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/1> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/1> <https://schema.org/maxValue> "6.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -215,7 +215,7 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2> <http://www.w3.org/2004/02/skos/core#note> "Boven de maximum grenswaarde van 8,5"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zuurtegraad waswater > 8,5"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2> <https://schema.org/minValue> "8.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -224,8 +224,8 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> <http://www.w3.org/2004/02/skos/core#note> "Boven de maximale waarde op technische fiche"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geleidbaarheid > maximum operationele waarde"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> <https://data.omgeving.vlaanderen.be/ns/lzs#operatie> "som"@nl .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "som"@nl .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/geleidbaarheidvanhetwaswater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> <https://schema.org/minValue> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -234,8 +234,8 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> <http://www.w3.org/2004/02/skos/core#note> "Onder de minimum grenswaarde, een afwijking > 20% t.o.v referentiewaarde technische fiche"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> <http://www.w3.org/2004/02/skos/core#prefLabel> "Waswaterdebiet afwijking > 20% onder normale operationele waarde"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> <https://data.omgeving.vlaanderen.be/ns/lzs#operatie> "product"@nl .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "product"@nl .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/waswaterdebiet> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> <https://schema.org/maxValue> "0.8"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -244,8 +244,8 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> <http://www.w3.org/2004/02/skos/core#note> "Onder de minimum grenswaarde, een afwijking > 10% t.o.v referentiewaarde technische fiche"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> <http://www.w3.org/2004/02/skos/core#prefLabel> "Spuiwaterproductie afwijking > 10% normale operationele waarde"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> <https://data.omgeving.vlaanderen.be/ns/lzs#operatie> "product"@nl .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "product"@nl .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/spuiwaterproductie> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> <https://schema.org/maxValue> "0.9"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -254,8 +254,8 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> <http://www.w3.org/2004/02/skos/core#note> "Onder de minimum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drukval afwijking > 40% onder normale operationele waarde"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> <https://data.omgeving.vlaanderen.be/ns/lzs#operatie> "product"@nl .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "product"@nl .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> <https://schema.org/maxValue> "0.6"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -264,8 +264,8 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> <http://www.w3.org/2004/02/skos/core#note> "Boven de maximum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drukval afwijking > 40% normale operationele waarde"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> <https://data.omgeving.vlaanderen.be/ns/lzs#operatie> "product"@nl .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "product"@nl .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> <https://schema.org/minValue> "1.4"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s2> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -274,8 +274,8 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> <http://www.w3.org/2004/02/skos/core#note> "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 1 pH)"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zuurtegraad waswater afwijking > 1 pH-eenheid boven normale operationele waarde"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> <https://data.omgeving.vlaanderen.be/ns/lzs#operatie> "som"@nl .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "som"@nl .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/zuurtegraadwaswater> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> <https://schema.org/minValue> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> <http://purl.org/dc/terms/type> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s3> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -284,8 +284,8 @@
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> <http://www.w3.org/2004/02/skos/core#note> "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 50 Pa)"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bandbreedte drukval afwijking > 50 Pa boven normale operationele waarde"@nl .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.omgeving.vlaanderen.be/id/conceptscheme/norm_bandbreedte> .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> <https://data.omgeving.vlaanderen.be/ns/lzs#operatie> "som"@nl .
-<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> <https://data.omgeving.vlaanderen.be/ns/lzs#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "som"@nl .
+<https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/drukvaloverhetsysteem> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> <https://schema.org/minValue> "50.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/s1> <http://www.w3.org/2004/02/skos/core#broader> <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/luchtwassysteem> .

@@ -40,6 +40,8 @@ ap :
 metadata :
   start_version : 0.0.1
   sparqlservice:
+    title: "Sparql service op endpoint https://data.omgeving.vlaanderen.be/sparql"
+    description: "Een beschrijving van de sparql service, met de verschillende kenmerken."
     endpoint: https://data.omgeving.vlaanderen.be/sparql
     feature:
       - http://www.w3.org/ns/sparql-service-description#DereferencesURIs
@@ -73,25 +75,37 @@ metadata :
     dct.language : http://publications.europa.eu/resource/authority/language/NLD
     landingPage  : https://data.omgeving.vlaanderen.be/doc/catalog/codelijst.html
   catalog :
+    title: "Catalogus van datasets van codelijsten."
+    description: "Catalogus van datasets van codelijsten die onder het domein data.omgeving.vlaanderen.be gepubliceerd worden."
     uri : https://data.omgeving.vlaanderen.be/id/catalog/codelijst
     type: http://www.w3.org/ns/dcat#Catalog
   dataset :
+    title: "Dataset van codelijsten i.v.m. luchtzuiveringssystemen voor stallen, gericht op de reductie van stikstofuitstoot."
+    description: "Deze dataset bevat codelijsten i.v.m. luchtzuiveringssystemen voor stallen, gericht op de reductie van stikstofuitstoot. De codelijsten hebben een onderlinge samenhang, bv. types van luchtzuiveringssystemen met specifieke regels. De lijsten worden gebruikt bij de een IOT-opzet, i.e. sensordata die aangeleverd worden voor de monitoring van deze systemen. Deze momitoring is opgezet in het kader van het ARMOS-project."
     temporal : https://data.omgeving.vlaanderen.be/id/periodoftime/dataset_omg
     type : http://www.w3.org/ns/dcat#Dataset
+    provenance:
+      label: "Deze combinatie van codelijsten kwam tot stand in het kader van het ARMOS-project en is een representatie van de logica en typering, die vervat is in regelgeving rond reductie van ammoniakemissie van stallen."
   distribution :
     parquet:
       mediaType: https://www.iana.org/assignments/media-types/application/vnd.apache.parquet
       format: http://publications.europa.eu/resource/authority/file-type/PARQUET
       type: http://www.w3.org/ns/dcat#Distribution
     xlsx:
+      title: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als excel-formaat."
+      description: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als excel bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
       format: http://publications.europa.eu/resource/authority/file-type/XLSX
       type: http://www.w3.org/ns/dcat#Distribution
     csv :
+      title: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als csv-formaat."
+      description: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als csv bestand."
       mediaType : https://www.iana.org/assignments/media-types/text/csv
       format : http://publications.europa.eu/resource/authority/file-type/CSV
       type : http://www.w3.org/ns/dcat#Distribution
     nt:
+      title: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als n-triple-formaat."
+      description: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als n-triple bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/n-triples
       format: http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES
       type: http://www.w3.org/ns/dcat#Distribution
@@ -100,10 +114,14 @@ metadata :
       format: http://publications.europa.eu/resource/authority/file-type/JSON
       type: http://www.w3.org/ns/dcat#Distribution
     ttl:
+      title: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als turtle-formaat."
+      description: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als turtle bestand."
       mediaType: https://www.iana.org/assignments/media-types/text/turtle
       format: http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE
       type : http://www.w3.org/ns/dcat#Distribution
     jsonld:
+      title: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als ld+json-formaat."
+      description: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als json-ld bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/ld+json
       format: http://publications.europa.eu/resource/authority/file-type/JSON_LD
       type : http://www.w3.org/ns/dcat#Distribution

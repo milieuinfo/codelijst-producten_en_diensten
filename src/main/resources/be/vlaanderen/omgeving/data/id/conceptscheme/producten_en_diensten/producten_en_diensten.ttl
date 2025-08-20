@@ -100,7 +100,7 @@ lzsp:biobedspoelwaterproductie dct:subject lzsm:waswater;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "Biobedspoelwaterproductie"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:relevantDataType xsd:decimal.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> xsd:decimal.
 lzsp:biobedspuiwaterproductie dct:subject lzsm:spuiwater;
     dct:type lzs-type:s3;
     qudt:relevantQuantityKind quantitykind:Volume;
@@ -110,7 +110,7 @@ lzsp:biobedspuiwaterproductie dct:subject lzsm:spuiwater;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "Biobedspuiwaterproductie"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:relevantDataType xsd:decimal.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> xsd:decimal.
 lzsp:drukvaloverhetsysteem dct:subject lzsm:lucht;
     dct:type lzs-type:s1, lzs-type:s2, lzs-type:s3;
     qudt:relevantQuantityKind quantitykind:Fugacity, quantitykind:VaporPressure;
@@ -120,7 +120,7 @@ lzsp:drukvaloverhetsysteem dct:subject lzsm:lucht;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "Drukval over het systeem"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:relevantDataType xsd:decimal.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> xsd:decimal.
 lzsp:geleidbaarheidvanhetwaswater dct:subject lzsm:waswater;
     dct:type lzs-type:s1, lzs-type:s2;
     qudt:relevantQuantityKind quantitykind:Conductivity;
@@ -130,8 +130,8 @@ lzsp:geleidbaarheidvanhetwaswater dct:subject lzsm:waswater;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "Geleidbaarheid van het waswater"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:hasProcedureForProperty procedure:WAC_I_A_011;
-    lzsns:relevantDataType xsd:decimal.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#hasProcedureForProperty> procedure:WAC_I_A_011;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> xsd:decimal.
 lzsp:spuiwaterproductie dct:subject lzsm:spuiwater;
     dct:type lzs-type:s1, lzs-type:s2;
     qudt:relevantQuantityKind quantitykind:Volume;
@@ -141,21 +141,21 @@ lzsp:spuiwaterproductie dct:subject lzsm:spuiwater;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "Spuiwaterproductie"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:relevantDataType xsd:decimal.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> xsd:decimal.
 lzsp:stalbezetting dct:subject lzsm:stal;
     dct:type lzs-type:s1, lzs-type:s2, lzs-type:s3;
     a skos:Concept, ssn:Property;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "Stalbezetting"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:relevantCodeList conceptscheme:lzsst.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantCodeList> conceptscheme:lzsst.
 lzsp:systeemstatus dct:subject lzsm:hetelektronischmonitoringssysteem;
     dct:type lzs-type:s1, lzs-type:s2, lzs-type:s3;
     a skos:Concept, ssn:Property;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "SysteemStatus"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:relevantCodeList conceptscheme:lzss.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantCodeList> conceptscheme:lzss.
 lzsp:waswaterdebiet dct:subject lzsm:waswater;
     dct:type lzs-type:s1, lzs-type:s2;
     qudt:relevantQuantityKind quantitykind:VolumeFlowRate, quantitykind:VolumePerTime;
@@ -165,7 +165,7 @@ lzsp:waswaterdebiet dct:subject lzsm:waswater;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "Waswaterdebiet over het waspakket"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:relevantDataType xsd:decimal.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> xsd:decimal.
 lzsp:waswaterdebietbevloeiing dct:subject lzsm:waswater;
     dct:type lzs-type:s3;
     qudt:relevantQuantityKind quantitykind:VolumeFlowRate, quantitykind:VolumePerTime;
@@ -175,7 +175,7 @@ lzsp:waswaterdebietbevloeiing dct:subject lzsm:waswater;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "Waswaterdebiet van de bevloeiing van het vulmateriaal"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:relevantDataType xsd:decimal.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> xsd:decimal.
 lzsp:waswaterdebietvoorbevochtiging dct:subject lzsm:waswater;
     dct:type lzs-type:s3;
     qudt:relevantQuantityKind quantitykind:VolumeFlowRate, quantitykind:VolumePerTime;
@@ -185,7 +185,7 @@ lzsp:waswaterdebietvoorbevochtiging dct:subject lzsm:waswater;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "Waswaterdebiet van de voorbevochtiging van de ingaande stallucht"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:relevantDataType xsd:decimal.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> xsd:decimal.
 lzsp:zuurtegraadwaswater dct:subject lzsm:waswater;
     dct:type lzs-type:s1, lzs-type:s2;
     qudt:relevantQuantityKind quantitykind:Acidity, quantitykind:Basicity;
@@ -195,8 +195,8 @@ lzsp:zuurtegraadwaswater dct:subject lzsm:waswater;
     skos:inScheme conceptscheme:lzsp;
     skos:prefLabel "Zuurtegraad van het waswater"@nl;
     skos:topConceptOf conceptscheme:lzsp;
-    lzsns:hasProcedureForProperty procedure:WAC_I_A_011;
-    lzsns:relevantDataType xsd:decimal.
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#hasProcedureForProperty> procedure:WAC_I_A_011;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType> xsd:decimal.
 lzs-type:luchtwassysteem a skos:Concept;
     skos:broader lzs-type:luchtzuiveringssysteem;
     skos:broaderTransitive lzs-type:luchtzuiveringssysteem;
@@ -239,7 +239,7 @@ lzsm:waswater a rdfs:Resource, skos:Concept;
     skos:note "Onder de minimum grenswaarde van 6"@nl;
     skos:prefLabel "Zuurtegraad waswater < 6"@nl;
     skos:topConceptOf conceptscheme:norm_bandbreedte;
-    lzsns:relevantProperty lzsp:zuurtegraadwaswater;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> lzsp:zuurtegraadwaswater;
     schema:maxValue 6.0.
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/2> dct:type lzs-type:s1;
     a skos:Concept;
@@ -248,7 +248,7 @@ lzsm:waswater a rdfs:Resource, skos:Concept;
     skos:note "Boven de maximum grenswaarde van 8,5"@nl;
     skos:prefLabel "Zuurtegraad waswater > 8,5"@nl;
     skos:topConceptOf conceptscheme:norm_bandbreedte;
-    lzsns:relevantProperty lzsp:zuurtegraadwaswater;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> lzsp:zuurtegraadwaswater;
     schema:minValue 8.5.
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/3> dct:type lzs-type:s1;
     a skos:Concept;
@@ -257,8 +257,8 @@ lzsm:waswater a rdfs:Resource, skos:Concept;
     skos:note "Boven de maximale waarde op technische fiche"@nl;
     skos:prefLabel "Geleidbaarheid > maximum operationele waarde"@nl;
     skos:topConceptOf conceptscheme:norm_bandbreedte;
-    lzsns:operatie "som"@nl;
-    lzsns:relevantProperty lzsp:geleidbaarheidvanhetwaswater;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "som"@nl;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> lzsp:geleidbaarheidvanhetwaswater;
     schema:minValue 0.0.
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/4> dct:type lzs-type:s1;
     a skos:Concept;
@@ -267,8 +267,8 @@ lzsm:waswater a rdfs:Resource, skos:Concept;
     skos:note "Onder de minimum grenswaarde, een afwijking > 20% t.o.v referentiewaarde technische fiche"@nl;
     skos:prefLabel "Waswaterdebiet afwijking > 20% onder normale operationele waarde"@nl;
     skos:topConceptOf conceptscheme:norm_bandbreedte;
-    lzsns:operatie "product"@nl;
-    lzsns:relevantProperty lzsp:waswaterdebiet;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "product"@nl;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> lzsp:waswaterdebiet;
     schema:maxValue 0.8.
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/5> dct:type lzs-type:s1;
     a skos:Concept;
@@ -277,8 +277,8 @@ lzsm:waswater a rdfs:Resource, skos:Concept;
     skos:note "Onder de minimum grenswaarde, een afwijking > 10% t.o.v referentiewaarde technische fiche"@nl;
     skos:prefLabel "Spuiwaterproductie afwijking > 10% normale operationele waarde"@nl;
     skos:topConceptOf conceptscheme:norm_bandbreedte;
-    lzsns:operatie "product"@nl;
-    lzsns:relevantProperty lzsp:spuiwaterproductie;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "product"@nl;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> lzsp:spuiwaterproductie;
     schema:maxValue 0.9.
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/6> dct:type lzs-type:s1;
     a skos:Concept;
@@ -287,8 +287,8 @@ lzsm:waswater a rdfs:Resource, skos:Concept;
     skos:note "Onder de minimum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche"@nl;
     skos:prefLabel "Drukval afwijking > 40% onder normale operationele waarde"@nl;
     skos:topConceptOf conceptscheme:norm_bandbreedte;
-    lzsns:operatie "product"@nl;
-    lzsns:relevantProperty lzsp:drukvaloverhetsysteem;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "product"@nl;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> lzsp:drukvaloverhetsysteem;
     schema:maxValue 0.6.
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/7> dct:type lzs-type:s1;
     a skos:Concept;
@@ -297,8 +297,8 @@ lzsm:waswater a rdfs:Resource, skos:Concept;
     skos:note "Boven de maximum grenswaarde, een afwijking > 40% t.o.v referentiewaarde technische fiche"@nl;
     skos:prefLabel "Drukval afwijking > 40% normale operationele waarde"@nl;
     skos:topConceptOf conceptscheme:norm_bandbreedte;
-    lzsns:operatie "product"@nl;
-    lzsns:relevantProperty lzsp:drukvaloverhetsysteem;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "product"@nl;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> lzsp:drukvaloverhetsysteem;
     schema:minValue 1.4.
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/8> dct:type lzs-type:s2;
     a skos:Concept;
@@ -307,8 +307,8 @@ lzsm:waswater a rdfs:Resource, skos:Concept;
     skos:note "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 1 pH)"@nl;
     skos:prefLabel "Zuurtegraad waswater afwijking > 1 pH-eenheid boven normale operationele waarde"@nl;
     skos:topConceptOf conceptscheme:norm_bandbreedte;
-    lzsns:operatie "som"@nl;
-    lzsns:relevantProperty lzsp:zuurtegraadwaswater;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "som"@nl;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> lzsp:zuurtegraadwaswater;
     schema:minValue 1.0.
 <https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/9> dct:type lzs-type:s3;
     a skos:Concept;
@@ -317,8 +317,8 @@ lzsm:waswater a rdfs:Resource, skos:Concept;
     skos:note "Boven de maximum grenswaarde, een afwijking > (waarde technische fiche + 50 Pa)"@nl;
     skos:prefLabel "Bandbreedte drukval afwijking > 50 Pa boven normale operationele waarde"@nl;
     skos:topConceptOf conceptscheme:norm_bandbreedte;
-    lzsns:operatie "som"@nl;
-    lzsns:relevantProperty lzsp:drukvaloverhetsysteem;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie> "som"@nl;
+    <https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty> lzsp:drukvaloverhetsysteem;
     schema:minValue 50.0.
 lzs-type:s1 a skos:Concept;
     skos:broader lzs-type:luchtwassysteem;
