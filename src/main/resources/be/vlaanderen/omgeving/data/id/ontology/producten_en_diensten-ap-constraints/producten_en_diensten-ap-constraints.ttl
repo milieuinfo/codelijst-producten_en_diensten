@@ -16,285 +16,249 @@
 @prefix ons:           <https://data.omgeving.vlaanderen.be/id/nodeshape/> .
 @prefix schema:        <http://schema.org/> .
 @prefix foaf:          <http://xmlns.com/foaf/0.1/> .
-@prefix dcat:  <http://www.w3.org/ns/dcat#> .
 
 omg_ont:producten_en_diensten-ap-constraints
     a               owl:Ontology ;
-    rdfs:comment
-                    "Specifieert hoe de data in de codelijst van luchtzuiveringssystemen te encoderen in RDF (i.e. RDF termen, kardinaliteiten,...)."@en ;
-    rdfs:label      "Matrix AP Constraints"@en ;
-    dct:abstract    "Het producten en diensten applicatieprofiel specifieert de RDF termen (klassen en properties) en bijhorende constraints die gebruikt worden voor het beschrijven van luchtzuiveringssystemen. Het maakt hierbij zoveel mogelijk gebruik van bestaande termen (klassen en properties) uit bestaande , skos, dbo, dbp en een minimale set van nieuwe termen gedefinieerd in het Matrix Vocabularium."@en ;
-    dct:alternative "Matrix AP Shapes"@en ;
+    rdfs:label      "Producten en diensten AP Constraints"@nl ;
+    rdfs:comment    "Specificeert hoe de codelijst van de producten en diensten van het Departement Omgeving in RDF geëncodeerd wordt (RDF-termen, kardinaliteiten, ...)."@nl ;
+    dct:title       "Producten en diensten AP Constraints"@nl ;
+    dct:alternative "Producten en diensten AP Shapes"@nl ;
+    dct:abstract    "Het applicatieprofiel van de producten- en dienstencatalogus (PDC) van het Departement Omgeving specificeert de RDF-termen en bijhorende constraints voor het beschrijven van de producten en diensten. De catalogus is een SKOS-conceptschema met drie niveaus (dienst 1, dienst 2, dienst 3), waarbij de diensten van niveau 3 gegroepeerd worden in SKOS-collecties volgens type dienst, fase in de beleidscyclus en betrokken afdeling. Er worden enkel bestaande termen uit SKOS hergebruikt."@nl ;
+    dct:description "Dit is de SHACL-encodering van het applicatieprofiel van de codelijst producten en diensten."@nl ;
     dct:creator     omg_ag_cl:creator ;
-    dct:description "Dit is de SHACL encodering van het applicatieprofiel van een producten en diensten."@en ;
     dct:issued      "2022-10-03"^^xsd:date ;
-    dct:title       "Matrix AP Constraints"@en ;
+    dct:modified    "2026-11-03"^^xsd:date ;
     xkos:belongsTo  omg_dataset:codelijst-producten_en_diensten ;
     xhv:last        omg_voc:producten_en_diensten-ap-constraints ;
     owl:sameAs      omg_voc:producten_en_diensten-ap-constraints ;
-    owl:versionInfo "Versie 1.0.0  oktober 2023"@en .
-
+    owl:versionInfo "Versie 2.0.0 november 2026"@nl .
 
 omg_voc:producten_en_diensten-ap-constraints
     a          owl:Ontology ;
-    rdfs:label "Matrix AP Constraints"@en ;
+    rdfs:label "Producten en diensten AP Constraints"@nl ;
     owl:sameAs omg_ont:producten_en_diensten-ap-constraints .
 
 omg_ag_cl:creator
-    rdfs:label "Ontwikkelaar codelijst"@en ;
+    a                  foaf:Person ;
+    rdfs:label         "Ontwikkelaar codelijst"@nl ;
     schema:affiliation vl_org:OVO003749 ;
-    a foaf:Person;
-    foaf:firstName "Geert";
-    foaf:lastName "Van Haute";
-    foaf:mbox <mailto:geert.vanhaute@vlaanderen.be>.
+    foaf:firstName     "Geert" ;
+    foaf:lastName      "Van Haute" ;
+    foaf:mbox          <mailto:geert.vanhaute@vlaanderen.be> .
 
+# ---------------------------------------------------------------------------
 # Node Shapes
-ons:schema
-    a                sh:NodeShape ;
-    rdfs:label       "conceptschema van luchtzuiveringssystemen"@en ;
-    sh:name          "conceptschema van luchtzuiveringssystemen"@en ;
-    sh:description   "Het schema waarbinnen de luchtzuiveringssystemen gedefinieerd zijn"@en ;
-    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:property      omg_ps:conceptscheme_prefLabel, omg_ps:schema_hasTopConcept,
-                     omg_ps:definition, omg_ps:rdf_type;
-
-    sh:targetClass   skos:ConceptScheme .
-
-
-
-ons:collection
-    a                sh:NodeShape ;
-    rdfs:label       "verzameling"@en ;
-    sh:name          "verzameling"@en ;
-    sh:description   "Verzamelingen bundelen luchtzuiveringssystemen met gelijkaardige eigenschappen, analysemethoden of luchtzuiveringssystemen waarin ze gemeten worden."@en ;
-    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:property      omg_ps:prefLabel, omg_ps:collection_member,
-                     omg_ps:inScheme, omg_ps:rdf_type;
-
-    sh:targetClass   skos:Collection .
-
-
+# ---------------------------------------------------------------------------
 
 ons:producten_en_diensten
     a                sh:NodeShape ;
-    rdfs:label       "producten en diensten"@en ;
-    sh:name          "producten en diensten"@en ;
-    sh:description   "analysemethodes"@en ;
-    rdfs:comment     ""@en ;
+    rdfs:label       "product of dienst"@nl ;
+    sh:name          "product of dienst"@nl ;
+    sh:description   "Een dienst uit de producten- en dienstencatalogus van het Departement Omgeving, op niveau 1, 2 of 3. Een dienst van niveau 1 is een topconcept zonder breder concept; diensten van niveau 2 en 3 hebben precies één breder concept."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:property      omg_ps:notation, omg_ps:inScheme,
-                     omg_ps:references, omg_ps:definition,
-                     omg_ps:prefLabel, omg_ps:theme,
-                      omg_ps:topConceptOf, omg_ps:altLabel,
-                     omg_ps:rdf_type, omg_ps:note ;
+    sh:targetClass   skos:Concept ;
+    sh:property      omg_ps:rdf_type, omg_ps:prefLabel, omg_ps:altLabel, omg_ps:notation,
+                     omg_ps:inScheme, omg_ps:topConceptOf, omg_ps:broader,
+                     omg_ps:definition, omg_ps:note ;
+    sh:xone          ( ons:producten_en_diensten_niveau_1 ons:producten_en_diensten_niveau_2_3 ) .
 
-    sh:targetClass   skos:Concept .
+ons:producten_en_diensten_niveau_1
+    a                sh:NodeShape ;
+    rdfs:label       "dienst niveau 1"@nl ;
+    sh:description   "Een dienst van niveau 1: topconcept van het schema, zonder breder concept, met notatie D1-nnnn."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:property      [ sh:path skos:topConceptOf ; sh:minCount 1 ] ,
+                     [ sh:path skos:broader ; sh:maxCount 0 ] ,
+                     [ sh:path skos:notation ; sh:pattern "^D1-[0-9]{4}$" ] .
 
+ons:producten_en_diensten_niveau_2_3
+    a                sh:NodeShape ;
+    rdfs:label       "dienst niveau 2 of 3"@nl ;
+    sh:description   "Een dienst van niveau 2 of 3: geen topconcept, met precies één breder concept en notatie D2-nnnn of D3-nnnn."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:property      [ sh:path skos:topConceptOf ; sh:maxCount 0 ] ,
+                     [ sh:path skos:broader ; sh:minCount 1 ] ,
+                     [ sh:path skos:notation ; sh:pattern "^D[23]-[0-9]{4}$" ] .
 
+ons:conceptschema
+    a                sh:NodeShape ;
+    rdfs:label       "conceptschema producten en diensten"@nl ;
+    sh:name          "conceptschema producten en diensten"@nl ;
+    sh:description   "Het conceptschema van de producten- en dienstencatalogus van het Departement Omgeving."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:targetClass   skos:ConceptScheme ;
+    sh:property      omg_ps:rdf_type, omg_ps:conceptscheme_prefLabel,
+                     omg_ps:hasTopConcept, omg_ps:definition .
 
+ons:collectie
+    a                sh:NodeShape ;
+    rdfs:label       "collectie producten en diensten"@nl ;
+    sh:name          "collectie producten en diensten"@nl ;
+    sh:description   "Een groepering van diensten volgens type dienst, fase in de beleidscyclus of betrokken afdeling."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:targetClass   skos:Collection ;
+    sh:property      omg_ps:rdf_type, omg_ps:prefLabel, omg_ps:collection_member,
+                     omg_ps:inScheme .
+
+ons:unieke_notatie
+    a                sh:NodeShape ;
+    rdfs:label       "unieke notatie"@nl ;
+    sh:description   "Een notatie identificeert precies één resource."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:targetObjectsOf skos:notation ;
+    sh:property      omg_ps:unique_notation .
+
+# ---------------------------------------------------------------------------
 # Property Shapes
+# ---------------------------------------------------------------------------
 
 omg_ps:rdf_type
     a                sh:PropertyShape ;
-    rdfs:label       "rdf type"@en ;
-    sh:name          "rdf type"@en ;
-    sh:description   "Aanduiding dat een bron een instantie van een bepaalde klasse is."@en ;
+    rdfs:label       "type"@nl ;
+    sh:name          "type"@nl ;
+    sh:description   "Het RDF-type van de resource."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-
     sh:minCount      1 ;
     sh:nodeKind      sh:IRI ;
     sh:path          rdf:type .
 
-
-omg_ps:topConceptOf
+omg_ps:prefLabel
     a                sh:PropertyShape ;
-    rdfs:label       "topconcept van"@en ;
-    sh:name          "topconcept van"@en ;
-    sh:description   "De relatie tussen een concept en het schema, waarvan het een topconcept is."@en ;
+    rdfs:label       "voorkeurslabel"@nl ;
+    sh:name          "voorkeurslabel"@nl ;
+    sh:description   "De benaming van de dienst of collectie in het Nederlands. Precies 1 voorkeurslabel is toegelaten."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:class         skos:ConceptScheme ;
+    sh:datatype      rdf:langString ;
+    sh:languageIn    ( "nl" ) ;
+    sh:minCount      1 ;
     sh:maxCount      1 ;
-    sh:nodeKind      sh:IRI ;
-    sh:path          skos:topConceptOf .
+    sh:nodeKind      sh:Literal ;
+    sh:path          skos:prefLabel .
 
-
-omg_ps:theme
-        a                sh:PropertyShape ;
-    rdfs:label       "thema"@en ;
-    sh:name          "thema"@en ;
-    sh:description   "De relatie naar een europees thema"@en ;
-    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:nodeKind      sh:IRI ;
-    sh:path          dcat:theme .
-
-#omg_ps:narrower
-#    a                sh:PropertyShape ;
-#    rdfs:label       "specifieker concept"@en ;
-#    sh:name          "specifieker concept"@en ;
-#    sh:description   "De relatie tussen een concept en een nauwer, specifieker concept binnen hetzelfde schema."@en ;
-#    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-#    sh:class         skos:Concept ;
-#    sh:nodeKind      sh:IRI ;
-#    sh:path          skos:narrower .
-
-#omg_ps:broader
-#    a                sh:PropertyShape ;
-#    rdfs:label       "breder concept"@en ;
-#    sh:name          "breder concept"@en ;
-#    sh:description   "De relatie tussen een concept en een breder, minder specifiek concept binnen hetzelfde schema."@en ;
-#    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-#    sh:class         skos:Concept ;
-#    sh:maxCount      1 ;
-#    sh:nodeKind      sh:IRI ;
-#    sh:path          skos:broader .
-
-omg_ps:topConceptOf
+omg_ps:conceptscheme_prefLabel
     a                sh:PropertyShape ;
-    rdfs:label       "topconcept van"@en ;
-    sh:name          "topconcept van"@en ;
-    sh:description   "De relatie tussen een concept en het schema, waarvan het een topconcept is."@en ;
+    rdfs:label       "voorkeurslabel conceptschema"@nl ;
+    sh:name          "voorkeurslabel conceptschema"@nl ;
+    sh:description   "De benaming van het conceptschema; maximaal 1 per taal (nl, en)."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:class         skos:ConceptScheme ;
-    sh:maxCount      1 ;
-    sh:nodeKind      sh:IRI ;
-    sh:path          skos:topConceptOf .
+    sh:datatype      rdf:langString ;
+    sh:languageIn    ( "nl" "en" ) ;
+    sh:uniqueLang    true ;
+    sh:minCount      1 ;
+    sh:maxCount      2 ;
+    sh:nodeKind      sh:Literal ;
+    sh:path          skos:prefLabel .
 
 omg_ps:altLabel
     a                sh:PropertyShape ;
-    rdfs:label       "alternatief label"@en ;
-    sh:name          "alternatief label"@en ;
-    sh:description   "Een alternatief lexicaal label voor een bepaalde bron."@en ;
+    rdfs:label       "alternatief label"@nl ;
+    sh:name          "alternatief label"@nl ;
+    sh:description   "Een alternatieve benaming van de dienst."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
     sh:datatype      rdf:langString ;
     sh:languageIn    ( "nl" "en" ) ;
     sh:nodeKind      sh:Literal ;
     sh:path          skos:altLabel .
 
+omg_ps:notation
+    a                sh:PropertyShape ;
+    rdfs:label       "notatie"@nl ;
+    sh:name          "notatie"@nl ;
+    sh:description   "De sleutel van de dienst in de producten- en dienstencatalogus: D1-nnnn, D2-nnnn of D3-nnnn."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:datatype      xsd:string ;
+    sh:pattern       "^D[123]-[0-9]{4}$" ;
+    sh:minCount      1 ;
+    sh:maxCount      1 ;
+    sh:nodeKind      sh:Literal ;
+    sh:path          skos:notation .
+
+omg_ps:unique_notation
+    a                sh:PropertyShape ;
+    rdfs:label       "unieke notatie"@nl ;
+    sh:description   "Elke notatie hoort bij precies één resource."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:nodeKind      sh:IRI ;
+    sh:minCount      1 ;
+    sh:maxCount      1 ;
+    sh:path          [ sh:inversePath skos:notation ] .
+
+omg_ps:inScheme
+    a                sh:PropertyShape ;
+    rdfs:label       "is in schema"@nl ;
+    sh:name          "is in schema"@nl ;
+    sh:description   "Het conceptschema waartoe de dienst of collectie behoort."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:class         skos:ConceptScheme ;
+    sh:minCount      1 ;
+    sh:maxCount      1 ;
+    sh:nodeKind      sh:IRI ;
+    sh:path          skos:inScheme .
+
+omg_ps:topConceptOf
+    a                sh:PropertyShape ;
+    rdfs:label       "topconcept van"@nl ;
+    sh:name          "topconcept van"@nl ;
+    sh:description   "Het conceptschema waarvan de dienst (niveau 1) een topconcept is."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:class         skos:ConceptScheme ;
+    sh:maxCount      1 ;
+    sh:nodeKind      sh:IRI ;
+    sh:path          skos:topConceptOf .
+
+omg_ps:broader
+    a                sh:PropertyShape ;
+    rdfs:label       "breder concept"@nl ;
+    sh:name          "breder concept"@nl ;
+    sh:description   "De bovenliggende dienst: een dienst van niveau 2 valt onder een dienst van niveau 1, een dienst van niveau 3 onder een dienst van niveau 2."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:class         skos:Concept ;
+    sh:maxCount      1 ;
+    sh:nodeKind      sh:IRI ;
+    sh:path          skos:broader .
+
+omg_ps:hasTopConcept
+    a                sh:PropertyShape ;
+    rdfs:label       "heeft topconcept"@nl ;
+    sh:name          "heeft topconcept"@nl ;
+    sh:description   "De diensten van niveau 1 van het conceptschema."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:class         skos:Concept ;
+    sh:minCount      1 ;
+    sh:nodeKind      sh:IRI ;
+    sh:path          skos:hasTopConcept .
+
 omg_ps:collection_member
     a                sh:PropertyShape ;
-    rdfs:label       "onderdeel"@en ;
-    sh:name          "onderdeel"@en ;
-    sh:description   "Een collectie heeft minstens 1 onderdeel."@en ;
+    rdfs:label       "lid"@nl ;
+    sh:name          "lid"@nl ;
+    sh:description   "Een dienst die tot de collectie behoort."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
     sh:class         skos:Concept ;
     sh:minCount      1 ;
     sh:nodeKind      sh:IRI ;
     sh:path          skos:member .
 
-
-
-#omg_ps:exactMatch
-#    a                sh:PropertyShape ;
-#    rdfs:label       "heeft exacte overeenkomst"@en ;
-#    sh:name          "heeft exacte overeenkomst"@en ;
-#    sh:description   "skos:exactMatch wordt gebruikt om twee concepten te koppelen, wat aangeeft dat er een hoge mate van vertrouwen bestaat dat de concepten onderling uitwisselbaar kunnen worden gebruikt in een breed scala aan toepassingen voor het ophalen van informatie. skos:exactMatch is een transitieve eigenschap en is een subeigenschap van skos:closeMatch"@en ;
-#    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-#    sh:nodeKind      sh:IRI ;
-#    sh:path          skos:exactMatch .
-
-omg_ps:notation
-    a                sh:PropertyShape ;
-    rdfs:label       "notatie"@en ;
-    sh:name          "notatie"@en ;
-    sh:description   "Een notatie, ook wel classificatiecode genoemd, is een reeks tekens zoals \"PCB151\" of \"EtFOSA\" die wordt gebruikt om producten en diensten op unieke wijze te identificeren binnen de context van dit schema."@en ;
-    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:datatype      xsd:string ;
-    sh:nodeKind      sh:Literal ;
-    sh:property      omg_ps:unique_notation ;
-    sh:path          skos:notation .
-
-omg_ps:unique_notation
-    a                  sh:PropertyShape ;
-    rdfs:label         "unieke notatie"@en ;
-    sh:name            "unieke notatie"@en ;
-    sh:description     "Een notatie, ook wel classificatiecode genoemd, is een reeks tekens zoals \"PCB151\" of \"EtFOSA\" die wordt gebruikt om een producten en diensten op unieke wijze te identificeren binnen de context van dit schema. Er kan vanuit verschillende classificatiesystemen, met meerdere notaties verwezen worden naar een product of dienst, maar een notatie is uniek voor specifieke producten en diensten, ttz. vanuit 1 notatie kan slechts naar 1 product of dienst worden verwezen."@en ;
-    rdfs:isDefinedBy   omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:nodeKind        sh:IRI ;
-    sh:targetObjectsOf skos:notation ;
-    sh:path            [ sh:inversePath skos:notation ] ;
-    sh:minCount        1 ;
-    sh:maxCount        1 .
-
-omg_ps:schema_hasTopConcept
-    a                sh:PropertyShape ;
-    rdfs:label       "heeft topconcept"@en ;
-    sh:name          "heeft topconcept"@en ;
-    sh:description   "Verbindt een conceptschema met een concept dat bovenaan in een 'broader/narrower' hierarchie staat en voorziet aldus een ingang tot die hierarchie."@en ;
-    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:class         skos:Concept ; #dbo:ChemicalCompound, dbo:ChemicalSubstance,
-    sh:minCount      1 ;
-    sh:nodeKind      sh:IRI ;
-    sh:path          skos:hasTopConcept .
-
-
-omg_ps:references
-    a                sh:PropertyShape ;
-    rdfs:label       "wordt vermeld in"@en ;
-    sh:name          "wordt vermeld in"@en ;
-    sh:description   "Binnen dit schema wordt dct:references gebruikt om de relatie tussen analysemethodes en wat geanalyseerd wordt te leggen, die betrekking hebben op de producten en diensten."@en ;
-    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:nodeKind      sh:IRI ;
-    sh:path          dct:references .
-
 omg_ps:definition
     a                sh:PropertyShape ;
-    rdfs:label       "definitie"@en ;
-    sh:name          "definitie"@en ;
-    sh:description   "Een uitspraak over de betekenis van het concept, de collectie of het schema."@en ;
+    rdfs:label       "definitie"@nl ;
+    sh:name          "definitie"@nl ;
+    sh:description   "Een omschrijving van de betekenis; maximaal 1 per taal (nl, en)."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
     sh:datatype      rdf:langString ;
     sh:languageIn    ( "nl" "en" ) ;
+    sh:uniqueLang    true ;
     sh:maxCount      2 ;
     sh:nodeKind      sh:Literal ;
     sh:path          skos:definition .
 
 omg_ps:note
     a                sh:PropertyShape ;
-    rdfs:label       "note"@en ;
-    sh:name          "note"@en ;
-    sh:description   "Een uitspraak over de betekenis van het concept, de collectie of het schema."@en ;
+    rdfs:label       "notitie"@nl ;
+    sh:name          "notitie"@nl ;
+    sh:description   "Een notitie bij de dienst; voor diensten van niveau 3 bevat ze het opgeleverde product, in de vorm 'Product: ...'."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
     sh:datatype      rdf:langString ;
     sh:languageIn    ( "nl" "en" ) ;
     sh:nodeKind      sh:Literal ;
     sh:path          skos:note .
-
-omg_ps:prefLabel
-    a                sh:PropertyShape ;
-    rdfs:label       "voorkeurslabel"@en ;
-    sh:name          "voorkeurslabel"@en ;
-    sh:description   "Het voorkeurslabel in de Nederlandse taal. Slechts 1 voorkeurslabel is toegelaten."@en ;
-    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:datatype      rdf:langString ;
-    sh:languageIn    ( "nl" ) ;
-    sh:maxCount      1 ;
-    sh:minCount      1 ;
-    sh:nodeKind      sh:Literal ;
-    sh:path          skos:prefLabel .
-
-
-omg_ps:conceptscheme_prefLabel
-    a                sh:PropertyShape ;
-    rdfs:label       "voorkeurslabel"@en ;
-    sh:name          "voorkeurslabel"@en ;
-    sh:description   "Het voorkeurslabel."@en ;
-    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:datatype      rdf:langString ;
-    sh:languageIn    ( "en" "nl" ) ;
-    sh:uniqueLang true ;
-    sh:maxCount      2 ;
-    sh:minCount      1 ;
-    sh:nodeKind      sh:Literal ;
-    sh:path          skos:prefLabel .
-
-omg_ps:inScheme
-    a                sh:PropertyShape ;
-    rdfs:label       "is in schema"@en ;
-    sh:name          "is in schema"@en ;
-    sh:description   "Drukt de relatie uit tussen een 'resource' en het schema dat het bevat."@en ;
-    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:class         skos:ConceptScheme ;
-    sh:maxCount      1 ;
-    sh:minCount      1 ;
-    sh:nodeKind      sh:IRI ;
-    sh:path          skos:inScheme .

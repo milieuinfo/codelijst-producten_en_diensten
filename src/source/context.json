@@ -263,10 +263,6 @@
     "@type": "@id",
     "@container": "@set"
   },
-  "operatie": {
-    "@id": "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#operatie",
-    "@language" : "nl"
-  },
   "prefLabel" : {
     "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
     "@language" : "nl"
@@ -276,17 +272,6 @@
   },
   "notation" : {
     "@id" : "http://www.w3.org/2004/02/skos/core#notation"
-  },
-  "actie" : {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#actie",
-    "@language" : "nl"
-  },
-  "normstatus" : {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#normstatus",
-    "@language" : "nl"
-  },
-  "intervalcategorie" : {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#intervalcategorie"
   },
   "altLabel" : {
     "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
@@ -308,9 +293,6 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#member",
     "@type" : "@id"
   },
-  "casNumber" : {
-    "@id" : "http://dbpedia.org/ontology/casNumber"
-  },
   "references" : {
     "@id" : "http://purl.org/dc/terms/references",
     "@type" : "@id"
@@ -328,7 +310,8 @@
   },
   "broaderTransitive" : {
     "@id" : "http://www.w3.org/2004/02/skos/core#broaderTransitive",
-    "@type" : "@id"
+    "@type" : "@id",
+    "@container" : "@set"
   },
   "broadMatch" : {
     "@id" : "http://www.w3.org/2004/02/skos/core#broadMatch",
@@ -374,18 +357,6 @@
     "@id" : "http://rdf-vocabulary.ddialliance.org/xkos#belongsTo",
     "@type" : "@id"
   },
-  "value": {
-    "@id": "https://schema.org/value",
-    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
-  },
-  "minValue": {
-    "@id": "https://schema.org/minValue",
-    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
-  },
-  "maxValue": {
-    "@id": "https://schema.org/maxValue",
-    "@type": "http://www.w3.org/2001/XMLSchema#decimal"
-  },
 
   "related" : {
     "@id" : "http://www.w3.org/2004/02/skos/core#related",
@@ -393,69 +364,5 @@
   },
   "dc_elements_identifier" : {
     "@id" : "http://purl.org/dc/elements/1.1/identifier"
-  },
-  "variabele" : {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#variabele",
-    "@type" : "@id"
-  },
-  "drager" : {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#drager",
-    "@type" : "@id"
-  },
-  "waardebepaling" : {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#waardebepaling",
-    "@type" : "@id"
-  },
-  "applicableUnit" : {
-    "@id" : "http://qudt.org/schema/qudt/applicableUnit",
-    "@type" : "@id"
-  },
-  "severity": {
-    "@id" : "http://www.w3.org/ns/shacl#severity",
-    "@type" : "@id"
-  },
-
-  "relevantUnit": {
-    "@id" : "http://qudt.org/schema/qudt/relevantUnit",
-    "@type" : "@id"
-  },
-  "relevantQuantityKind" : {
-    "@id" : "http://qudt.org/schema/qudt/relevantQuantityKind",
-    "@type" : "@id",
-    "@container": "@set"
-  },
-  "hasProcedureForProperty":  {
-  "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#hasProcedureForProperty",
-  "@type" : "@id"
-},
-  "relevantSystem":  {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantSystem",
-    "@type" : "@id",
-    "@container": "@set"
-  },
-  "relevantCodeList":  {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantCodeList",
-    "@type" : "@id",
-    "@container": "@set"
-  },
-  "relevantDataType":  {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantDataType",
-    "@type" : "@id"
-  },
-  "relevantProperty": {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#relevantProperty",
-    "@type" : "@id"
-  },
-  "technischefiche": {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#technischefiche",
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
-  },
-  "referentiewaardeType": {
-    "@id" : "https://data.lzs.omgeving.vlaanderen.be/ns/vocab#referentiewaardeType"
   }
 }
-
-
-
-
-

@@ -1,10 +1,10 @@
 types : producten_en_diensten
 skos:
   rules :
-    skos_rules : /../node_modules/maven-metadata-generator-npm/src/n3/skos-rules.n3
-    dcterms_rules : /../node_modules/maven-metadata-generator-npm/src/n3/dcterms-rules.n3
+    skos_rules : /../node_modules/@milieuinfo/maven-metadata-generator-npm/src/n3/skos-rules.n3
+    dcterms_rules : /../node_modules/@milieuinfo/maven-metadata-generator-npm/src/n3/dcterms-rules.n3
   prefixes :
-    concept : https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/property/
+    concept : https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/
     collectie : https://data.omgeving.vlaanderen.be/id/collection/producten_en_diensten/
   path: ./main/resources/be/vlaanderen/omgeving/data/id/conceptscheme/
   name: producten_en_diensten
@@ -13,14 +13,14 @@ skos:
   xsd: .xsd
   csv: .csv
   rdf_xml: .rdf
-  xlsx: .xlsx
   nt: .nt
   json: .json
   parquet: .parquet
 
 source:
   path: ./source/
-  codelijst_csv: codelijst-source.csv
+  codelijst_csv:
+    - codelijst-source.csv
   context: context.json
 dcat:
   path_catalog: be/vlaanderen/omgeving/data/id/catalog/
@@ -80,48 +80,46 @@ metadata :
     uri : https://data.omgeving.vlaanderen.be/id/catalog/codelijst
     type: http://www.w3.org/ns/dcat#Catalog
   dataset :
-    title: "Dataset van codelijsten i.v.m. luchtzuiveringssystemen voor stallen, gericht op de reductie van stikstofuitstoot."
-    description: "Deze dataset bevat codelijsten i.v.m. luchtzuiveringssystemen voor stallen, gericht op de reductie van stikstofuitstoot. De codelijsten hebben een onderlinge samenhang, bv. types van luchtzuiveringssystemen met specifieke regels. De lijsten worden gebruikt bij de een IOT-opzet, i.e. sensordata die aangeleverd worden voor de monitoring van deze systemen. Deze momitoring is opgezet in het kader van het ARMOS-project."
+    title: "Dataset van de codelijst producten en diensten van het Departement Omgeving."
+    description: "Deze dataset bevat de codelijst van de producten en diensten van het Departement Omgeving (producten- en dienstencatalogus, PDC). De catalogus is functioneel opgebouwd in drie niveaus: dienst 1, dienst 2 en dienst 3, waarbij elke dienst 3 een of meer producten oplevert. De diensten van niveau 3 zijn bovendien gegroepeerd in collecties volgens type dienst (kern of omkaderend), fase in de beleidscyclus en betrokken afdeling."
     temporal : https://data.omgeving.vlaanderen.be/id/periodoftime/dataset_omg
     type : http://www.w3.org/ns/dcat#Dataset
     provenance:
-      label: "Deze combinatie van codelijsten kwam tot stand in het kader van het ARMOS-project en is een representatie van de logica en typering, die vervat is in regelgeving rond reductie van ammoniakemissie van stallen."
+      label: "Deze codelijst is afgeleid uit de producten- en dienstencatalogus van het Departement Omgeving (bronbestand 250804_PDC_DOMG.xlsx, tabblad PDI OMG, versie 4 augustus 2025)."
   distribution :
     parquet:
+      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als parquet-formaat."
+      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als parquet-bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/vnd.apache.parquet
       format: http://publications.europa.eu/resource/authority/file-type/PARQUET
       type: http://www.w3.org/ns/dcat#Distribution
-    xlsx:
-      title: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als excel-formaat."
-      description: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als excel bestand."
-      mediaType: https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-      format: http://publications.europa.eu/resource/authority/file-type/XLSX
-      type: http://www.w3.org/ns/dcat#Distribution
     csv :
-      title: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als csv-formaat."
-      description: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als csv bestand."
+      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als csv-formaat."
+      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als csv-bestand."
       mediaType : https://www.iana.org/assignments/media-types/text/csv
       format : http://publications.europa.eu/resource/authority/file-type/CSV
       type : http://www.w3.org/ns/dcat#Distribution
     nt:
-      title: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als n-triple-formaat."
-      description: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als n-triple bestand."
+      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als n-triple-formaat."
+      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als n-triple-bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/n-triples
       format: http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES
       type: http://www.w3.org/ns/dcat#Distribution
     json:
+      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als json-formaat."
+      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als json-bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/json
       format: http://publications.europa.eu/resource/authority/file-type/JSON
       type: http://www.w3.org/ns/dcat#Distribution
     ttl:
-      title: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als turtle-formaat."
-      description: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als turtle bestand."
+      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als turtle-formaat."
+      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als turtle-bestand."
       mediaType: https://www.iana.org/assignments/media-types/text/turtle
       format: http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE
       type : http://www.w3.org/ns/dcat#Distribution
     jsonld:
-      title: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als ld+json-formaat."
-      description: "Codelijsten ivm. luchtzuiveringssystemen voor stallen, geserialiseerd als json-ld bestand."
+      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als ld+json-formaat."
+      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als json-ld-bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/ld+json
       format: http://publications.europa.eu/resource/authority/file-type/JSON_LD
       type : http://www.w3.org/ns/dcat#Distribution
@@ -141,7 +139,6 @@ prefixes :
   datasets: https://datasets.omgeving.vlaanderen.be/
   datatheme_be: http://vocab.belgif.be/auth/datatheme/
   datatheme_eu: http://publications.europa.eu/resource/authority/data-theme/
-  dbo: http://dbpedia.org/ontology/
   dcat: http://www.w3.org/ns/dcat#
   dc: http://purl.org/dc/elements/1.1/
   dcterms: http://purl.org/dc/terms/
@@ -184,27 +181,10 @@ prefixes :
   ts: http://www.w3.org/ns/formats/
   vcard: http://www.w3.org/2006/vcard/ns#
   void: http://rdfs.org/ns/void#
-  wise: http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty/
   xkos: http://rdf-vocabulary.ddialliance.org/xkos#
   xsd: http://www.w3.org/2001/XMLSchema#
-  wb: https://data.omgeving.vlaanderen.be/id/concept/waardebepaling/
-  normatieve_structuur: https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/normatieve_structuur/
-  lzp: https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/property/
-  lzs-type: https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/
-  lzs-norm: https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/norm_bandbreedte/
-  lzss: https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/status/
-  lzsst: https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/stalgebruik/
-  lzsm: https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/medium/
-  lzsp: https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/eigenschap/
-  dr: https://data.omgeving.vlaanderen.be/id/concept/drager/
-  lzsns: https://data.omgeving.vlaanderen.be/ns/lzs#
-  qudt: http://qudt.org/schema/qudt/
-  unit: http://qudt.org/vocab/unit/
+  pd: https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/
   sh: http://www.w3.org/ns/shacl#
-  quantitykind: http://qudt.org/vocab/quantitykind/
-  ssn: http://www.w3.org/ns/ssn/
-  sosa: http://www.w3.org/ns/sosa/
-  procedure: https://data.omgeving.vlaanderen.be/id/concept/observatieprocedure/
 
 deploy:
   virtuoso: virtuoso-algemeen
