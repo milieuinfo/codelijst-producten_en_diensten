@@ -16,29 +16,33 @@ const context = JSON.parse(fs.readFileSync(config.source.path + config.source.co
 const context_prefixes = Object.assign({},context , prefixes)
 
 
-// SKOS-relaties naar andere resources: enkel als IRI opnemen, niet inbedden.
-const skos_links = [
+// De dataset bevat de SKOS-codelijst en de diensten volgens CPSV-AP. Relaties naar andere resources
+// enkel als IRI opnemen, niet inbedden.
+const links = [
     "inScheme", "topConceptOf", "hasTopConcept", "member",
     "broader", "narrower", "broaderTransitive", "narrowerTransitive",
     "related", "semanticRelation",
-    "mappingRelation", "exactMatch", "closeMatch", "broadMatch", "narrowMatch"
+    "mappingRelation", "exactMatch", "closeMatch", "broadMatch", "narrowMatch",
+    "isClassifiedBy", "hasCompetentAuthority", "hasParticipation", "role", "hasParticipant",
+    "produces", "spatial"
 ]
 
-const no_embed = Object.fromEntries(skos_links.map(p => [p, {"@embed": "@never", "@omitDefault": true}]))
+const no_embed = Object.fromEntries(links.map(p => [p, {"@embed": "@never", "@omitDefault": true}]))
+
+const types = [
+    "skos:ConceptScheme", "skos:Concept", "skos:Collection",
+    "cpsv:PublicService", "cv:Output", "cv:Participation", "cv:PublicOrganisation", "dct:Location"
+]
 
 const frame_skos_prefixes = {
     "@context": context_prefixes,
-    "@type": ["skos:ConceptScheme", "skos:Concept", "skos:Collection"],
+    "@type": types,
     ...no_embed
 }
 
 const frame_skos_no_prefixes = {
     "@context": context,
-    "type": [
-        "http://www.w3.org/2004/02/skos/core#ConceptScheme",
-        "http://www.w3.org/2004/02/skos/core#Concept",
-        "http://www.w3.org/2004/02/skos/core#Collection"
-    ],
+    "type": types.map(t => { const [p, l] = t.split(':'); return prefixes[p] + l }),
     ...no_embed
 }
 
@@ -94,11 +98,17 @@ const skosOptions = {
     //"xsdOptions": xsdOptions
 }
 
+// Shapes: het SKOS-profiel en het CPSV-AP-profiel (config.ap.types)
+const shapesDataset = rdf.dataset()
+for (const type of config.ap.types) {
+    await shapesDataset.import(rdf.fromFile(config.ap.path + config.ap.name + '-' + type + '/' + config.ap.name + '-' + type + config.ap.turtle))
+}
+
 const skosSource = {
     "sourcePaths": config.source.codelijst_csv.map(csv => config.source.path + csv),
     "contextPrefixes": Object.assign({},skos_context , skos_prefixes),
     "rules": config.skos.rules,
-    "shapesDataset": await rdf.dataset().import(rdf.fromFile(config.ap.path + config.ap.name + '-' + config.ap.type + '/' + config.ap.name + '-' + config.ap.type + config.ap.turtle)),
+    "shapesDataset": shapesDataset,
     "prefixes": Object.assign( {}, config.skos.prefixes, config.prefixes)
 }
 

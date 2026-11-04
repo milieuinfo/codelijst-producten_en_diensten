@@ -74,7 +74,7 @@
             </configuration>
           </execution>
           <execution>
-            <!-- genereert de SKOS-bestanden opnieuw uit src/source; Jenkins controleert
+            <!-- genereert de dataset (SKOS-codelijst en CPSV-AP) opnieuw uit src/source; Jenkins controleert
                  daarna dat ze identiek zijn aan de gecommitte versie -->
             <id>create skos</id>
             <goals>

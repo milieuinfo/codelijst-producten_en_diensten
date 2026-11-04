@@ -7,15 +7,13 @@
 @prefix dct:           <http://purl.org/dc/terms/> .
 @prefix sh:            <http://www.w3.org/ns/shacl#> .
 @prefix omg_ont:       <https://data.omgeving.vlaanderen.be/id/ontology/> .
-@prefix omg_ag_cl:     <https://data.omgeving.vlaanderen.be/id/person/codelijst/> .
 @prefix omg_voc:       <https://data.omgeving.vlaanderen.be/ns/> .
 @prefix vl_org:        <http://data.vlaanderen.be/id/organisatie/> .
 @prefix xkos:          <http://rdf-vocabulary.ddialliance.org/xkos#> .
 @prefix omg_ps:        <https://data.omgeving.vlaanderen.be/id/propertyshape/> .
 @prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ons:           <https://data.omgeving.vlaanderen.be/id/nodeshape/> .
-@prefix schema:        <http://schema.org/> .
-@prefix foaf:          <http://xmlns.com/foaf/0.1/> .
+@prefix conceptscheme: <https://data.omgeving.vlaanderen.be/id/conceptscheme/> .
 
 omg_ont:producten_en_diensten-ap-constraints
     a               owl:Ontology ;
@@ -23,9 +21,9 @@ omg_ont:producten_en_diensten-ap-constraints
     rdfs:comment    "Specificeert hoe de codelijst van de producten en diensten van het Departement Omgeving in RDF geëncodeerd wordt (RDF-termen, kardinaliteiten, ...)."@nl ;
     dct:title       "Producten en diensten AP Constraints"@nl ;
     dct:alternative "Producten en diensten AP Shapes"@nl ;
-    dct:abstract    "Het applicatieprofiel van de producten- en dienstencatalogus (PDC) van het Departement Omgeving specificeert de RDF-termen en bijhorende constraints voor het beschrijven van de producten en diensten. De catalogus is een SKOS-conceptschema met drie niveaus (dienst 1, dienst 2, dienst 3), waarbij de diensten van niveau 3 gegroepeerd worden in SKOS-collecties volgens type dienst, fase in de beleidscyclus en betrokken afdeling. Er worden enkel bestaande termen uit SKOS hergebruikt."@nl ;
+    dct:abstract    "Het applicatieprofiel van de producten- en dienstencatalogus (PDC) van het Departement Omgeving specificeert de RDF-termen en bijhorende constraints voor het beschrijven van de producten en diensten. De catalogus is een SKOS-conceptschema met drie niveaus (dienst 1, dienst 2, dienst 3), waarbij de diensten van niveau 3 gegroepeerd worden in SKOS-collecties volgens type dienst, fase in de beleidscyclus, betrokken afdeling, intern of extern gericht en interne of externe trigger. Er worden enkel bestaande termen uit SKOS hergebruikt."@nl ;
     dct:description "Dit is de SHACL-encodering van het applicatieprofiel van de codelijst producten en diensten."@nl ;
-    dct:creator     omg_ag_cl:creator ;
+    dct:creator     vl_org:OVO003749 ;
     dct:issued      "2022-10-03"^^xsd:date ;
     dct:modified    "2026-11-03"^^xsd:date ;
     xkos:belongsTo  omg_dataset:codelijst-producten_en_diensten ;
@@ -38,14 +36,6 @@ omg_voc:producten_en_diensten-ap-constraints
     rdfs:label "Producten en diensten AP Constraints"@nl ;
     owl:sameAs omg_ont:producten_en_diensten-ap-constraints .
 
-omg_ag_cl:creator
-    a                  foaf:Person ;
-    rdfs:label         "Ontwikkelaar codelijst"@nl ;
-    schema:affiliation vl_org:OVO003749 ;
-    foaf:firstName     "Geert" ;
-    foaf:lastName      "Van Haute" ;
-    foaf:mbox          <mailto:geert.vanhaute@vlaanderen.be> .
-
 # ---------------------------------------------------------------------------
 # Node Shapes
 # ---------------------------------------------------------------------------
@@ -54,13 +44,25 @@ ons:producten_en_diensten
     a                sh:NodeShape ;
     rdfs:label       "product of dienst"@nl ;
     sh:name          "product of dienst"@nl ;
-    sh:description   "Een dienst uit de producten- en dienstencatalogus van het Departement Omgeving, op niveau 1, 2 of 3. Een dienst van niveau 1 is een topconcept zonder breder concept; diensten van niveau 2 en 3 hebben precies één breder concept."@nl ;
+    sh:description   "Een dienst uit de producten- en dienstencatalogus van het Departement Omgeving, op niveau 1, 2 of 3. Een dienst van niveau 1 is een topconcept zonder breder concept; diensten van niveau 2 en 3 hebben precies één breder concept. Geldt voor elke resource met een skos:notation, zodat concepten uit andere conceptschema's (bv. in de CPSV-AP-data) niet aan deze regels moeten voldoen; ons:concept_in_producten_en_diensten zorgt dat elk concept van dit schema een notatie heeft."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
-    sh:targetClass   skos:Concept ;
+    sh:targetSubjectsOf skos:notation ;
+    sh:class         skos:Concept ;
     sh:property      omg_ps:rdf_type, omg_ps:prefLabel, omg_ps:altLabel, omg_ps:notation,
-                     omg_ps:inScheme, omg_ps:topConceptOf, omg_ps:broader,
+                     omg_ps:inScheme, omg_ps:inScheme_producten_en_diensten, omg_ps:topConceptOf, omg_ps:broader,
                      omg_ps:definition, omg_ps:note ;
     sh:xone          ( ons:producten_en_diensten_niveau_1 ons:producten_en_diensten_niveau_2_3 ) .
+
+ons:concept_in_producten_en_diensten
+    a                sh:NodeShape ;
+    rdfs:label       "concept in de producten- en dienstencatalogus"@nl ;
+    sh:name          "concept in de producten- en dienstencatalogus"@nl ;
+    sh:description   "Een concept dat tot het conceptschema producten en diensten behoort, heeft een notatie, en valt daardoor onder ons:producten_en_diensten."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:targetClass   skos:Concept ;
+    sh:not           [ sh:and ( [ sh:property [ sh:path skos:inScheme ; sh:hasValue conceptscheme:producten_en_diensten ] ]
+                                [ sh:property [ sh:path skos:notation ; sh:maxCount 0 ] ] ) ] ;
+    sh:message       "Een concept in conceptscheme:producten_en_diensten moet een skos:notation hebben."@nl .
 
 ons:producten_en_diensten_niveau_1
     a                sh:NodeShape ;
@@ -94,7 +96,7 @@ ons:collectie
     a                sh:NodeShape ;
     rdfs:label       "collectie producten en diensten"@nl ;
     sh:name          "collectie producten en diensten"@nl ;
-    sh:description   "Een groepering van diensten volgens type dienst, fase in de beleidscyclus of betrokken afdeling."@nl ;
+    sh:description   "Een groepering van diensten volgens type dienst, fase in de beleidscyclus, betrokken afdeling, intern of extern gericht, of interne of externe trigger."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
     sh:targetClass   skos:Collection ;
     sh:property      omg_ps:rdf_type, omg_ps:prefLabel, omg_ps:collection_member,
@@ -193,6 +195,15 @@ omg_ps:inScheme
     sh:minCount      1 ;
     sh:maxCount      1 ;
     sh:nodeKind      sh:IRI ;
+    sh:path          skos:inScheme .
+
+omg_ps:inScheme_producten_en_diensten
+    a                sh:PropertyShape ;
+    rdfs:label       "is in schema producten en diensten"@nl ;
+    sh:name          "is in schema producten en diensten"@nl ;
+    sh:description   "Een dienst behoort tot het conceptschema producten en diensten."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-ap-constraints, omg_voc:producten_en_diensten-ap-constraints ;
+    sh:hasValue      conceptscheme:producten_en_diensten ;
     sh:path          skos:inScheme .
 
 omg_ps:topConceptOf

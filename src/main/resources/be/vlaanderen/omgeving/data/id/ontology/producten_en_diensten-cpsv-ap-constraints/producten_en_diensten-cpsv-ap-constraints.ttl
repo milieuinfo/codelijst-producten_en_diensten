@@ -1,0 +1,246 @@
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix xhv:           <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:          <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct:           <http://purl.org/dc/terms/> .
+@prefix sh:            <http://www.w3.org/ns/shacl#> .
+@prefix cpsv:          <http://purl.org/vocab/cpsv#> .
+@prefix cv:            <http://data.europa.eu/m8g/> .
+@prefix vl_org:        <http://data.vlaanderen.be/id/organisatie/> .
+@prefix omg_dataset:   <https://data.omgeving.vlaanderen.be/id/dataset/> .
+@prefix omg_ont:       <https://data.omgeving.vlaanderen.be/id/ontology/> .
+@prefix omg_voc:       <https://data.omgeving.vlaanderen.be/ns/> .
+@prefix xkos:          <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix ps:            <https://data.omgeving.vlaanderen.be/id/propertyshape/producten_en_diensten-cpsv/> .
+@prefix ns:            <https://data.omgeving.vlaanderen.be/id/nodeshape/producten_en_diensten-cpsv/> .
+
+omg_ont:producten_en_diensten-cpsv-ap-constraints
+    a               owl:Ontology ;
+    rdfs:label      "Producten en diensten CPSV-AP Constraints"@nl ;
+    rdfs:comment    "Specificeert hoe de producten en diensten van het Departement Omgeving als publieke dienstverlening volgens CPSV-AP in RDF geëncodeerd worden."@nl ;
+    dct:title       "Producten en diensten CPSV-AP Constraints"@nl ;
+    dct:alternative "Producten en diensten CPSV-AP Shapes"@nl ;
+    dct:abstract    "Elke dienst van niveau 3 uit de producten- en dienstencatalogus (PDC) van het Departement Omgeving is een cpsv:PublicService, geclassificeerd door het overeenkomstige concept uit de SKOS-codelijst producten en diensten. Elk product is een cv:Output van die dienst. Het Departement Omgeving is de bevoegde overheid. Elke betrokken afdeling is een cv:Participation met de rol 'betrokken afdeling'. De organisaties zijn geïdentificeerd met hun OVO-nummer zoals geldig op de datum van de bron. Gebaseerd op CPSV-AP 3.2.0. De bron bevat nog geen beschrijvingen van de diensten; dct:description bevat daarom voorlopig de plaatshouder 'TODO'."@nl ;
+    dct:description "Dit is de SHACL-encodering van het CPSV-AP-profiel van de producten en diensten."@nl ;
+    dct:creator     vl_org:OVO003749 ;
+    dct:issued      "2026-11-04"^^xsd:date ;
+    dct:modified    "2026-11-04"^^xsd:date ;
+    dct:conformsTo  <http://data.europa.eu/m8g/cpsvap/3.2.0> ;
+    xkos:belongsTo  omg_dataset:codelijst-producten_en_diensten ;
+    xhv:last        omg_voc:producten_en_diensten-cpsv-ap-constraints ;
+    owl:sameAs      omg_voc:producten_en_diensten-cpsv-ap-constraints ;
+    owl:versionInfo "Versie 0.2.0 november 2026"@nl .
+
+omg_voc:producten_en_diensten-cpsv-ap-constraints
+    a          owl:Ontology ;
+    rdfs:label "Producten en diensten CPSV-AP Constraints"@nl ;
+    owl:sameAs omg_ont:producten_en_diensten-cpsv-ap-constraints .
+
+# ---------------------------------------------------------------------------
+# Node Shapes
+# ---------------------------------------------------------------------------
+
+ns:publieke_dienst
+    a                sh:NodeShape ;
+    rdfs:label       "publieke dienst"@nl ;
+    sh:name          "publieke dienst"@nl ;
+    sh:description   "Een dienst van niveau 3 uit de producten- en dienstencatalogus van het Departement Omgeving."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:targetClass   cpsv:PublicService ;
+    sh:property      ps:identifier, ps:dienst_identifier, ps:title, ps:description, ps:isClassifiedBy,
+                     ps:hasCompetentAuthority, ps:hasParticipation, ps:produces .
+
+ns:output
+    a                sh:NodeShape ;
+    rdfs:label       "output"@nl ;
+    sh:name          "output"@nl ;
+    sh:description   "Een product dat een dienst oplevert."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:targetClass   cv:Output ;
+    sh:property      ps:identifier, ps:output_identifier, ps:title .
+
+ns:participatie
+    a                sh:NodeShape ;
+    rdfs:label       "participatie"@nl ;
+    sh:name          "participatie"@nl ;
+    sh:description   "De betrokkenheid van een afdeling bij een dienst."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:targetClass   cv:Participation ;
+    sh:property      ps:identifier, ps:participatie_identifier, ps:participatie_description,
+                     ps:role, ps:hasParticipant .
+
+ns:publieke_organisatie
+    a                sh:NodeShape ;
+    rdfs:label       "publieke organisatie"@nl ;
+    sh:name          "publieke organisatie"@nl ;
+    sh:description   "Het Departement Omgeving of een van zijn afdelingen, geïdentificeerd met het OVO-nummer uit het organisatieregister Wegwijs, zoals geldig op de datum van de bron."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:targetClass   cv:PublicOrganisation ;
+    sh:property      ps:identifier, ps:organisatie_identifier, ps:title, ps:prefLabel, ps:altLabel, ps:spatial .
+
+# ---------------------------------------------------------------------------
+# Property Shapes
+# ---------------------------------------------------------------------------
+
+ps:identifier
+    a                sh:PropertyShape ;
+    sh:name          "identificator"@nl ;
+    sh:description   "De identificator van de resource. Precies 1 is toegelaten."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          dct:identifier ;
+    sh:datatype      xsd:string ;
+    sh:minCount      1 ;
+    sh:maxCount      1 .
+
+ps:dienst_identifier
+    a                sh:PropertyShape ;
+    sh:name          "identificator dienst"@nl ;
+    sh:description   "De sleutel van de dienst van niveau 3 uit de catalogus, D3-nnnn."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          dct:identifier ;
+    sh:pattern       "^D3-[0-9]{4}$" .
+
+ps:output_identifier
+    a                sh:PropertyShape ;
+    sh:name          "identificator output"@nl ;
+    sh:description   "De vaste sleutel van het product uit de kolom 'key product' van de catalogus: P-nnnn. Een sleutel wordt nooit hergebruikt."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          dct:identifier ;
+    sh:pattern       "^P-[0-9]{4}$" .
+
+ps:participatie_identifier
+    a                sh:PropertyShape ;
+    sh:name          "identificator participatie"@nl ;
+    sh:description   "De sleutel van de dienst, gevolgd door de afkorting van de afdeling: D3-nnnn-AFK."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          dct:identifier ;
+    sh:pattern       "^D3-[0-9]{4}-[A-Z]+$" .
+
+ps:organisatie_identifier
+    a                sh:PropertyShape ;
+    sh:name          "OVO-nummer"@nl ;
+    sh:description   "Het OVO-nummer van de organisatie in Wegwijs."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          dct:identifier ;
+    sh:pattern       "^OVO[0-9]{6}$" .
+
+ps:title
+    a                sh:PropertyShape ;
+    sh:name          "naam"@nl ;
+    sh:description   "De naam van de dienst, het product of de organisatie in het Nederlands. Precies 1 is toegelaten."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          dct:title ;
+    sh:datatype      rdf:langString ;
+    sh:languageIn    ( "nl" ) ;
+    sh:minCount      1 ;
+    sh:maxCount      1 .
+
+ps:description
+    a                sh:PropertyShape ;
+    sh:name          "beschrijving"@nl ;
+    sh:description   "De beschrijving van de dienst in het Nederlands. Precies 1 is toegelaten. De bron bevat nog geen beschrijvingen; tot ze aangeleverd worden, staat er de plaatshouder 'TODO'."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          dct:description ;
+    sh:datatype      rdf:langString ;
+    sh:languageIn    ( "nl" ) ;
+    sh:minCount      1 ;
+    sh:maxCount      1 .
+
+ps:participatie_description
+    a                sh:PropertyShape ;
+    sh:name          "beschrijving participatie"@nl ;
+    sh:description   "Welke afdeling bij welke dienst betrokken is, in het Nederlands. Precies 1 is toegelaten."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          dct:description ;
+    sh:datatype      rdf:langString ;
+    sh:languageIn    ( "nl" ) ;
+    sh:minCount      1 ;
+    sh:maxCount      1 .
+
+ps:isClassifiedBy
+    a                sh:PropertyShape ;
+    sh:name          "is geclassificeerd door"@nl ;
+    sh:description   "Het concept van niveau 3 uit de SKOS-codelijst producten en diensten. Precies 1 is toegelaten."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          cv:isClassifiedBy ;
+    sh:class         skos:Concept ;
+    sh:pattern       "^https://data\\.omgeving\\.vlaanderen\\.be/id/concept/producten_en_diensten/D3-[0-9]{4}$" ;
+    sh:minCount      1 ;
+    sh:maxCount      1 .
+
+ps:hasCompetentAuthority
+    a                sh:PropertyShape ;
+    sh:name          "bevoegde overheid"@nl ;
+    sh:description   "De bevoegde overheid: het Departement Omgeving."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          cv:hasCompetentAuthority ;
+    sh:class         cv:PublicOrganisation ;
+    sh:minCount      1 .
+
+ps:hasParticipation
+    a                sh:PropertyShape ;
+    sh:name          "participatie"@nl ;
+    sh:description   "De afdelingen die volgens de catalogus betrokken zijn bij de dienst."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          cv:hasParticipation ;
+    sh:class         cv:Participation .
+
+ps:produces
+    a                sh:PropertyShape ;
+    sh:name          "levert op"@nl ;
+    sh:description   "De producten die de dienst oplevert."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          cpsv:produces ;
+    sh:class         cv:Output .
+
+ps:role
+    a                sh:PropertyShape ;
+    sh:name          "rol"@nl ;
+    sh:description   "De rol van de organisatie in de dienst: 'betrokken afdeling'. Precies 1 is toegelaten."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          cv:role ;
+    sh:class         skos:Concept ;
+    sh:hasValue      <https://data.omgeving.vlaanderen.be/id/concept/participatierol/betrokken_afdeling> ;
+    sh:minCount      1 ;
+    sh:maxCount      1 .
+
+ps:hasParticipant
+    a                sh:PropertyShape ;
+    sh:name          "deelnemer"@nl ;
+    sh:description   "De betrokken afdeling. Precies 1 is toegelaten."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          cv:hasParticipant ;
+    sh:class         cv:PublicOrganisation ;
+    sh:minCount      1 ;
+    sh:maxCount      1 .
+
+ps:prefLabel
+    a                sh:PropertyShape ;
+    sh:name          "voorkeurslabel"@nl ;
+    sh:description   "De naam van de organisatie zoals in Wegwijs. Precies 1 is toegelaten."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          skos:prefLabel ;
+    sh:datatype      rdf:langString ;
+    sh:languageIn    ( "nl" ) ;
+    sh:minCount      1 ;
+    sh:maxCount      1 .
+
+ps:altLabel
+    a                sh:PropertyShape ;
+    sh:name          "afkorting"@nl ;
+    sh:description   "De afkorting van de organisatie zoals gebruikt in de producten- en dienstencatalogus."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          skos:altLabel ;
+    sh:nodeKind      sh:Literal ;
+    sh:maxCount      1 .
+
+ps:spatial
+    a                sh:PropertyShape ;
+    sh:name          "ruimtelijke dekking"@nl ;
+    sh:description   "Het gebied waarvoor de organisatie bevoegd is."@nl ;
+    rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
+    sh:path          dct:spatial ;
+    sh:class         dct:Location ;
+    sh:minCount      1 .

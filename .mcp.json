@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "ld-vocab": {
+      "command": "java",
+      "args": [
+        "-jar",
+        "${LD_MCP_JAR:-tools/ld-mcp-vocab.jar}",
+        "--ontologies",
+        "src/main/vocab",
+        "--generate-shapes",
+        "--shapes",
+        "src/main/resources/be/vlaanderen/omgeving/data/id/ontology/producten_en_diensten-ap-constraints/producten_en_diensten-ap-constraints.ttl",
+        "--rules",
+        "src/main/rules/be/vlaanderen/omgeving/data/id/rule/domain-range-subproperty.rules",
+        "--shapes",
+        "src/main/resources/be/vlaanderen/omgeving/data/id/ontology/producten_en_diensten-cpsv-ap-constraints/producten_en_diensten-cpsv-ap-constraints.ttl",
+        "--shapes",
+        "src/main/shapes/io/github/semiceu/CPSV-AP/releases/3.2.0/shacl/cpsv-ap-SHACL.ttl"
+      ]
+    }
+  }
+}

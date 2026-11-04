@@ -30,8 +30,8 @@ pipeline {
                 }
             }
         }
-        stage("Controle gegenereerde SKOS") {
-            // De SKOS-bestanden in src/main/resources worden lokaal gegenereerd en gecommit,
+        stage("Controle gegenereerde bestanden") {
+            // De bestanden van de dataset (SKOS-codelijst en CPSV-AP) in src/main/resources worden lokaal gegenereerd en gecommit,
             // zodat ze in de tag op hun pad staan. Genereer ze hier opnieuw uit src/source
             // en faal als ze afwijken van wat gecommit is (vóór release:prepare een tag maakt).
             when {
@@ -41,16 +41,16 @@ pipeline {
                 script {
                     maven.goal([goal: 'generate-resources'])
                     sh '''
-                        git -c safe.directory="$WORKSPACE" status --porcelain -- src/main/resources > skos-diff.txt
-                        if [ -s skos-diff.txt ]; then
-                            echo "De gegenereerde SKOS-bestanden wijken af van de gecommitte versie:"
-                            cat skos-diff.txt
+                        git -c safe.directory="$WORKSPACE" status --porcelain -- src/main/resources > generated-diff.txt
+                        if [ -s generated-diff.txt ]; then
+                            echo "De gegenereerde bestanden wijken af van de gecommitte versie:"
+                            cat generated-diff.txt
                             git -c safe.directory="$WORKSPACE" --no-pager diff --stat -- src/main/resources
                             echo "Draai lokaal 'pnpm run create_skos' en commit het resultaat."
-                            rm -f skos-diff.txt
+                            rm -f generated-diff.txt
                             exit 1
                         fi
-                        rm -f skos-diff.txt
+                        rm -f generated-diff.txt
                     '''
                 }
             }

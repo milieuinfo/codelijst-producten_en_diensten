@@ -6,6 +6,10 @@ skos:
   prefixes :
     concept : https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/
     collectie : https://data.omgeving.vlaanderen.be/id/collection/producten_en_diensten/
+    publicservice : https://data.omgeving.vlaanderen.be/id/publicservice/producten_en_diensten/
+    output : https://data.omgeving.vlaanderen.be/id/output/producten_en_diensten/
+    participatie : https://data.omgeving.vlaanderen.be/id/participation/producten_en_diensten/
+    participatierol : https://data.omgeving.vlaanderen.be/id/concept/participatierol/
   path: ./main/resources/be/vlaanderen/omgeving/data/id/conceptscheme/
   name: producten_en_diensten
   turtle: .ttl
@@ -21,6 +25,8 @@ source:
   path: ./source/
   codelijst_csv:
     - codelijst-source.csv
+    - cpsv-source.csv
+    - organisaties.csv
   context: context.json
 dcat:
   path_catalog: be/vlaanderen/omgeving/data/id/catalog/
@@ -36,6 +42,9 @@ dcat:
 ap :
   path: ./main/resources/be/vlaanderen/omgeving/data/id/ontology/
   type: ap-constraints
+  types:
+    - ap-constraints
+    - cpsv-ap-constraints
   name: producten_en_diensten
   turtle: .ttl
 
@@ -82,46 +91,46 @@ metadata :
     uri : https://data.omgeving.vlaanderen.be/id/catalog/codelijst
     type: http://www.w3.org/ns/dcat#Catalog
   dataset :
-    title: "Dataset van de codelijst producten en diensten van het Departement Omgeving."
-    description: "Deze dataset bevat de codelijst van de producten en diensten van het Departement Omgeving (producten- en dienstencatalogus, PDC). De catalogus is functioneel opgebouwd in drie niveaus: dienst 1, dienst 2 en dienst 3, waarbij elke dienst 3 een of meer producten oplevert. De diensten van niveau 3 zijn bovendien gegroepeerd in collecties volgens type dienst (kern of omkaderend), fase in de beleidscyclus en betrokken afdeling."
+    title: "Dataset van de producten en diensten van het Departement Omgeving: codelijst en publieke dienstverlening (CPSV-AP)."
+    description: "Deze dataset bevat de producten- en dienstencatalogus (PDC) van het Departement Omgeving in twee vormen. Als SKOS-codelijst is de catalogus functioneel opgebouwd in drie niveaus: dienst 1, dienst 2 en dienst 3, waarbij de diensten van niveau 3 gegroepeerd zijn in collecties volgens type dienst (kern of omkaderend), fase in de beleidscyclus, betrokken afdeling, intern of extern gericht en interne of externe trigger. Volgens CPSV-AP 3.2.0 is elke dienst van niveau 3 een publieke dienst (cpsv:PublicService), geclassificeerd door het overeenkomstige concept uit de codelijst, met de producten als output (cv:Output), het Departement Omgeving als bevoegde overheid en de betrokken afdelingen als participatie (cv:Participation). De beschrijvingen van de diensten zijn voorlopig plaatshouders."
     temporal : https://data.omgeving.vlaanderen.be/id/periodoftime/dataset_omg
     type : http://www.w3.org/ns/dcat#Dataset
     provenance:
       label: "Deze codelijst is afgeleid uit de producten- en dienstencatalogus van het Departement Omgeving (bronbestand 250804_PDC_DOMG.xlsx, tabblad PDI OMG, versie 4 augustus 2025)."
   distribution :
     parquet:
-      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als parquet-formaat."
-      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als parquet-bestand."
+      title: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als parquet-formaat."
+      description: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als parquet-bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/vnd.apache.parquet
       format: http://publications.europa.eu/resource/authority/file-type/PARQUET
       type: http://www.w3.org/ns/dcat#Distribution
     csv :
-      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als csv-formaat."
-      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als csv-bestand."
+      title: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als csv-formaat."
+      description: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als csv-bestand."
       mediaType : https://www.iana.org/assignments/media-types/text/csv
       format : http://publications.europa.eu/resource/authority/file-type/CSV
       type : http://www.w3.org/ns/dcat#Distribution
     nt:
-      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als n-triple-formaat."
-      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als n-triple-bestand."
+      title: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als n-triple-formaat."
+      description: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als n-triple-bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/n-triples
       format: http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES
       type: http://www.w3.org/ns/dcat#Distribution
     json:
-      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als json-formaat."
-      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als json-bestand."
+      title: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als json-formaat."
+      description: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als json-bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/json
       format: http://publications.europa.eu/resource/authority/file-type/JSON
       type: http://www.w3.org/ns/dcat#Distribution
     ttl:
-      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als turtle-formaat."
-      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als turtle-bestand."
+      title: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als turtle-formaat."
+      description: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als turtle-bestand."
       mediaType: https://www.iana.org/assignments/media-types/text/turtle
       format: http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE
       type : http://www.w3.org/ns/dcat#Distribution
     jsonld:
-      title: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als ld+json-formaat."
-      description: "Codelijst producten en diensten van het Departement Omgeving, geserialiseerd als json-ld-bestand."
+      title: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als ld+json-formaat."
+      description: "Producten en diensten van het Departement Omgeving (codelijst en CPSV-AP), geserialiseerd als json-ld-bestand."
       mediaType: https://www.iana.org/assignments/media-types/application/ld+json
       format: http://publications.europa.eu/resource/authority/file-type/JSON_LD
       type : http://www.w3.org/ns/dcat#Distribution
@@ -187,6 +196,10 @@ prefixes :
   xsd: http://www.w3.org/2001/XMLSchema#
   pd: https://data.omgeving.vlaanderen.be/id/concept/producten_en_diensten/
   sh: http://www.w3.org/ns/shacl#
+  cpsv: http://purl.org/vocab/cpsv#
+  cv: http://data.europa.eu/m8g/
+  ipdc: https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#
+  geonames: https://sws.geonames.org/
 
 deploy:
   virtuoso: virtuoso-algemeen
