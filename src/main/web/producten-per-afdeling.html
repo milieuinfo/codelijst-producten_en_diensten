@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Producten en diensten per afdeling</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Werkblad: links de keuze van de afdeling, rechts het overzicht per dienst 1 > dienst 2 > dienst 3. */
+:root {
+  --bg: #f6f7f8;
+  --surface: #ffffff;
+  --ink: #18202a;
+  --muted: #5a6573;
+  --line: #dfe3e8;
+  --accent: #0b5c6b;
+  --accent-soft: #e3f0f2;
+  --chip: #eef1f4;
+  --warn: #8a5a00;
+  --warn-soft: #fff4dc;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12171d; --surface: #1a2129; --ink: #e6eaef; --muted: #9aa5b2; --line: #2c3540;
+    --accent: #5fc2d1; --accent-soft: #1d3439; --chip: #232c36; --warn: #f0c060; --warn-soft: #3a2f17;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12171d; --surface: #1a2129; --ink: #e6eaef; --muted: #9aa5b2; --line: #2c3540;
+  --accent: #5fc2d1; --accent-soft: #1d3439; --chip: #232c36; --warn: #f0c060; --warn-soft: #3a2f17;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 15px/1.5 var(--sans);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 48px;
+}
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1240px; margin: 0 auto; display: grid; gap: 24px; }
+header { display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: end; justify-content: space-between; }
+header h1 { margin: 0; font-size: 26px; line-height: 1.2; font-weight: 700; text-wrap: balance; }
+header p { margin: 4px 0 0; color: var(--muted); max-width: 62ch; }
+.source { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--muted); }
+select, input[type="search"] {
+  font: inherit; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px;
+}
+.layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 24px; align-items: start; }
+@media (max-width: 860px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+
+/* Afdelingen */
+nav.afdelingen { display: grid; gap: 6px; position: sticky; top: 16px; }
+nav.afdelingen h2, .panel h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 4px; font-weight: 600; }
+.afd {
+  display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 10px; align-items: center;
+  width: 100%; text-align: left; font: inherit; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; cursor: pointer;
+}
+.afd:hover { border-color: var(--accent); }
+.afd[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.afd .afk { font: 500 13px var(--mono); color: var(--accent); }
+.afd .naam { font-size: 13px; line-height: 1.3; min-width: 0; }
+.afd .n { font: 13px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) {
+  nav.afdelingen { position: static; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  nav.afdelingen h2 { grid-column: 1 / -1; }
+  .afd { grid-template-columns: auto minmax(0, 1fr); }
+  .afd .naam { display: none; }
+}
+
+/* Samenvatting */
+main { display: grid; gap: 20px; min-width: 0; }
+.titel h2 { margin: 0; font-size: 22px; line-height: 1.25; text-wrap: balance; }
+.titel .meta { color: var(--muted); font-size: 13px; margin-top: 2px; }
+.titel .meta code { font-family: var(--mono); }
+.cijfers { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.cijfer { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+.cijfer .waarde { font: 600 26px/1.1 var(--mono); font-variant-numeric: tabular-nums; }
+.cijfer .label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.fasen { display: grid; gap: 4px; }
+.fase {
+  display: grid; grid-template-columns: minmax(0, 15em) minmax(0, 1fr) 3em; gap: 10px; align-items: center;
+  font: inherit; font-size: 13px; color: var(--ink); background: none; border: 0; padding: 3px 4px; border-radius: 4px; cursor: pointer; text-align: left;
+}
+.fase:hover { background: var(--chip); }
+.fase[aria-pressed="true"] { background: var(--accent-soft); }
+.fase .bar { height: 10px; background: var(--chip); border-radius: 3px; overflow: hidden; }
+.fase .bar span { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+.fase .n { font-family: var(--mono); text-align: right; font-variant-numeric: tabular-nums; }
+.fase .lbl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Filters */
+.filters { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+.filters input[type="search"] { flex: 1 1 220px; min-width: 0; }
+.filters label { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+.filters .acties { margin-left: auto; display: flex; gap: 8px; }
+button.knop {
+  font: inherit; font-size: 13px; color: var(--accent); background: var(--surface);
+  border: 1px solid var(--accent); border-radius: 6px; padding: 6px 12px; cursor: pointer;
+}
+button.knop:hover { background: var(--accent-soft); }
+.telling { font-size: 13px; color: var(--muted); }
+
+/* Lijst */
+.d1 { display: grid; gap: 10px; }
+.d1 > h3 { margin: 8px 0 0; font-size: 17px; display: flex; gap: 10px; align-items: baseline; }
+.d2 { border-left: 2px solid var(--line); padding-left: 14px; display: grid; gap: 8px; }
+.d2 > h4 { margin: 4px 0 0; font-size: 14px; font-weight: 600; color: var(--muted); display: flex; gap: 8px; align-items: baseline; }
+.code { font: 500 12px var(--mono); color: var(--muted); white-space: nowrap; }
+.d3 { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; display: grid; gap: 8px; }
+.d3 .kop { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.d3 .kop .naam { font-weight: 600; flex: 1 1 20ch; min-width: 0; }
+.d3 .kop a { font-size: 13px; white-space: nowrap; }
+.producten { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; font-size: 14px; }
+.producten li { display: flex; gap: 8px; align-items: baseline; }
+.producten li::before { content: "→"; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12px; background: var(--chip); border-radius: 999px; padding: 2px 10px; color: var(--ink); }
+.chip.kern { background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+.chip.ander { font-family: var(--mono); }
+.chip.alleen { background: var(--warn-soft); color: var(--warn); font-weight: 500; }
+.samen { font-size: 12px; color: var(--muted); margin-right: 2px; align-self: center; }
+.leeg, .status { color: var(--muted); padding: 24px; text-align: center; background: var(--surface); border: 1px dashed var(--line); border-radius: 8px; }
+.status.fout { color: var(--warn); border-color: var(--warn); background: var(--warn-soft); text-align: left; }
+footer { color: var(--muted); font-size: 13px; max-width: 80ch; display: grid; gap: 6px; }
+footer p { margin: 0; }
+@media (prefers-reduced-motion: no-preference) { .fase .bar span { transition: width .25s ease-out; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Producten en diensten per afdeling</h1>
+      <p>Overzicht uit de producten- en dienstencatalogus van het Departement Omgeving: de diensten waarbij een afdeling betrokken is, met hun producten.</p>
+    </div>
+    <div class="source">
+      <label for="omgeving">Bron</label>
+      <select id="omgeving">
+        <option value="https://data-oefen.omgeving.vlaanderen.be">Oefen (data-oefen.omgeving.vlaanderen.be)</option>
+        <option value="https://data.omgeving.vlaanderen.be">Productie (data.omgeving.vlaanderen.be)</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="afdelingen" id="afdelingen" aria-label="Afdelingen">
+      <h2>Afdeling</h2>
+    </nav>
+
+    <main id="inhoud">
+      <div class="status" id="status">De catalogus wordt geladen…</div>
+    </main>
+  </div>
+
+  <footer>
+    <p>De catalogus vermeldt per dienst welke afdelingen erbij <em>betrokken</em> zijn. Ze zegt niet welke afdeling de dienst uitvoert of eindverantwoordelijk is; bevoegde overheid is voor alle diensten het Departement Omgeving.</p>
+    <p>Bron: de dataset codelijst-producten_en_diensten (SKOS en CPSV-AP), bevraagd via het SPARQL-endpoint van de gekozen omgeving. Bronversie van de catalogus: 4 augustus 2025.</p>
+  </footer>
+</div>
+
+<script>
+'use strict';
+const GRAAF = 'https://data.omgeving.vlaanderen.be/id/graph/codelijst-producten_en_diensten';
+const ID_BASIS = 'https://data.omgeving.vlaanderen.be/id/';
+const PREFIXEN = `PREFIX cv: <http://data.europa.eu/m8g/>
+PREFIX cpsv: <http://purl.org/vocab/cpsv#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+`;
+const QUERIES = {
+  diensten: `SELECT DISTINCT ?dienst ?id ?titel ?d2 ?d2n ?d2l ?d1 ?d1n ?d1l FROM <${GRAAF}> WHERE {
+    ?dienst a cpsv:PublicService ; dct:identifier ?id ; dct:title ?titel ; cv:isClassifiedBy ?c .
+    ?c skos:broader ?d2 . ?d2 skos:notation ?d2n ; skos:prefLabel ?d2l ; skos:broader ?d1 .
+    ?d1 skos:notation ?d1n ; skos:prefLabel ?d1l }`,
+  producten: `SELECT DISTINCT ?dienst ?pid ?ptitel FROM <${GRAAF}> WHERE {
+    ?dienst cpsv:produces ?o . ?o dct:identifier ?pid ; dct:title ?ptitel }`,
+  participaties: `SELECT DISTINCT ?dienst ?org FROM <${GRAAF}> WHERE {
+    ?dienst cv:hasParticipation ?p . ?p cv:hasParticipant ?org }`,
+  facetten: `SELECT DISTINCT ?dienst ?coll ?label FROM <${GRAAF}> WHERE {
+    ?dienst cv:isClassifiedBy ?c . ?coll a skos:Collection ; skos:member ?c ; skos:prefLabel ?label }`,
+  organisaties: `SELECT DISTINCT ?org ?naam ?afk ?ovo FROM <${GRAAF}> WHERE {
+    ?org a cv:PublicOrganisation ; skos:prefLabel ?naam ; skos:altLabel ?afk ; dct:identifier ?ovo }`
+};
+
+const $ = sel => document.querySelector(sel);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const opslag = {
+  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch { /* geen opslag beschikbaar */ } }
+};
+
+let data = null;            // { diensten: Map, organisaties: [], fasen: [] }
+const staat = { afk: null, zoek: '', type: '', fase: '', alleen: false };
+
+async function sparql(basis, query) {
+  const url = basis + '/sparql?query=' + encodeURIComponent(PREFIXEN + query);
+  const res = await fetch(url, { headers: { Accept: 'application/sparql-results+json' } });
+  if (!res.ok) throw new Error(`Het SPARQL-endpoint antwoordde met ${res.status} ${res.statusText}.`);
+  const json = await res.json();
+  return json.results.bindings.map(b => Object.fromEntries(Object.entries(b).map(([k, v]) => [k, v.value])));
+}
+
+// Facetlabels zijn "Type dienst: Kern", "Fase beleidscyclus: …", "Gericht: extern", "Trigger: intern".
+function facet(coll, label) {
+  const m = label.match(/^(Type dienst|Fase beleidscyclus|Gericht|Trigger): (.*)$/);
+  if (!m) return null; // afdelingscollecties: die komen uit de participaties
+  const soort = { 'Type dienst': 'type', 'Fase beleidscyclus': 'fase', 'Gericht': 'gericht', 'Trigger': 'trigger' }[m[1]];
+  const sleutel = coll.split('/').pop();
+  return { soort, waarde: m[2], sleutel };
+}
+
+async function laad(basis) {
+  $('#inhoud').innerHTML = '<div class="status" id="status">De catalogus wordt geladen…</div>';
+  const [d, p, part, f, o] = await Promise.all(
+    ['diensten', 'producten', 'participaties', 'facetten', 'organisaties'].map(k => sparql(basis, QUERIES[k])));
+  const diensten = new Map();
+  for (const r of d) {
+    if (diensten.has(r.dienst)) continue;
+    diensten.set(r.dienst, { iri: r.dienst, id: r.id, titel: r.titel,
+      d2: { n: r.d2n, l: r.d2l }, d1: { n: r.d1n, l: r.d1l },
+      producten: [], orgs: new Set(), type: '', fase: null, gericht: [], trigger: [] });
+  }
+  for (const r of p) {
+    const x = diensten.get(r.dienst);
+    if (x && !x.producten.some(q => q.id === r.pid)) x.producten.push({ id: r.pid, titel: r.ptitel });
+  }
+  for (const r of part) diensten.get(r.dienst)?.orgs.add(r.org);
+  const fasen = new Map();
+  for (const r of f) {
+    const x = diensten.get(r.dienst); const fc = facet(r.coll, r.label);
+    if (!x || !fc) continue;
+    if (fc.soort === 'type') x.type = fc.waarde;
+    else if (fc.soort === 'fase') { x.fase = fc; fasen.set(fc.sleutel, fc.waarde); }
+    else if (!x[fc.soort].includes(fc.waarde)) x[fc.soort].push(fc.waarde);
+  }
+  const organisaties = [...new Map(o.map(r => [r.org, { iri: r.org, naam: r.naam, afk: r.afk, ovo: r.ovo }])).values()];
+  for (const x of diensten.values()) x.producten.sort((a, b) => a.id.localeCompare(b.id));
+  return {
+    diensten, organisaties,
+    perIri: new Map(organisaties.map(x => [x.iri, x])),
+    fasen: [...fasen.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([sleutel, waarde]) => ({ sleutel, waarde }))
+  };
+}
+
+function afdelingen() {
+  return data.organisaties.filter(o => [...data.diensten.values()].some(d => d.orgs.has(o.iri)))
+    .sort((a, b) => a.afk.localeCompare(b.afk));
+}
+
+function tekenAfdelingen() {
+  const nav = $('#afdelingen');
+  nav.innerHTML = '<h2>Afdeling</h2>' + afdelingen().map(o => {
+    const n = [...data.diensten.values()].filter(d => d.orgs.has(o.iri)).length;
+    return `<button type="button" class="afd" id="afd-${esc(o.afk)}" data-afk="${esc(o.afk)}" aria-pressed="${o.afk === staat.afk}">
+      <span class="afk">${esc(o.afk)}</span><span class="naam">${esc(o.naam)}</span><span class="n">${n}</span></button>`;
+  }).join('');
+}
+
+function dienstenVan(org) {
+  return [...data.diensten.values()].filter(d => d.orgs.has(org.iri));
+}
+
+function gefilterd(lijst, org) {
+  const zoek = staat.zoek.trim().toLowerCase();
+  return lijst.filter(d =>
+    (!staat.type || d.type === staat.type) &&
+    (!staat.fase || d.fase?.sleutel === staat.fase) &&
+    (!staat.alleen || d.orgs.size === 1) &&
+    (!zoek || [d.id, d.titel, d.d2.l, d.d1.l, ...d.producten.flatMap(p => [p.id, p.titel])].some(t => t.toLowerCase().includes(zoek))));
+}
+
+function docUrl(iri) {
+  return iri.startsWith(ID_BASIS) ? $('#omgeving').value + '/doc/' + iri.slice(ID_BASIS.length) : iri;
+}
+
+function teken() {
+  const org = data.organisaties.find(o => o.afk === staat.afk);
+  if (!org) { $('#inhoud').innerHTML = '<div class="leeg">Kies links een afdeling.</div>'; return; }
+  const alle = dienstenVan(org);
+  const lijst = gefilterd(alle, org).sort((a, b) => a.id.localeCompare(b.id));
+  const producten = alle.reduce((n, d) => n + d.producten.length, 0);
+  const alleen = alle.filter(d => d.orgs.size === 1).length;
+  const kern = alle.filter(d => d.type === 'Kern').length;
+  const extern = alle.filter(d => d.gericht.includes('extern')).length;
+
+  const perFase = data.fasen.map(f => ({ ...f, n: alle.filter(d => d.fase?.sleutel === f.sleutel).length })).filter(f => f.n > 0);
+  const max = Math.max(1, ...perFase.map(f => f.n));
+
+  // Groeperen: dienst 1 > dienst 2 > dienst 3
+  const groepen = new Map();
+  for (const d of lijst) {
+    if (!groepen.has(d.d1.n)) groepen.set(d.d1.n, { ...d.d1, d2: new Map() });
+    const g1 = groepen.get(d.d1.n);
+    if (!g1.d2.has(d.d2.n)) g1.d2.set(d.d2.n, { ...d.d2, d3: [] });
+    g1.d2.get(d.d2.n).d3.push(d);
+  }
+
+  const dienstHtml = d => {
+    const anderen = [...d.orgs].filter(i => i !== org.iri).map(i => data.perIri.get(i)?.afk ?? i).sort();
+    return `<article class="d3">
+      <div class="kop"><span class="code">${esc(d.id)}</span><span class="naam">${esc(d.titel)}</span>
+        <a href="${esc(docUrl(d.iri))}" target="_blank" rel="noopener">details</a></div>
+      ${d.producten.length ? `<ul class="producten">${d.producten.map(p => `<li><span class="code">${esc(p.id)}</span><span>${esc(p.titel)}</span></li>`).join('')}</ul>` : ''}
+      <div class="chips">
+        ${d.type ? `<span class="chip ${d.type === 'Kern' ? 'kern' : ''}">${esc(d.type.toLowerCase())}</span>` : ''}
+        ${d.fase ? `<span class="chip">fase: ${esc(d.fase.waarde)}</span>` : ''}
+        ${d.gericht.map(g => `<span class="chip">${esc(g)} gericht</span>`).join('')}
+        ${d.trigger.map(t => `<span class="chip">${esc(t)}e trigger</span>`).join('')}
+        ${anderen.length ? `<span class="samen">samen met</span>${anderen.map(a => `<span class="chip ander">${esc(a)}</span>`).join('')}`
+                         : '<span class="chip alleen">enkel deze afdeling</span>'}
+      </div>
+    </article>`;
+  };
+
+  $('#inhoud').innerHTML = `
+    <div class="titel">
+      <h2>${esc(org.naam)}</h2>
+      <div class="meta"><code>${esc(org.afk)}</code> · OVO-nummer <code>${esc(org.ovo)}</code></div>
+    </div>
+    <div class="cijfers">
+      <div class="cijfer"><div class="waarde">${alle.length}</div><div class="label">diensten waarbij de afdeling betrokken is</div></div>
+      <div class="cijfer"><div class="waarde">${producten}</div><div class="label">producten van die diensten</div></div>
+      <div class="cijfer"><div class="waarde">${alleen}</div><div class="label">diensten met enkel deze afdeling</div></div>
+      <div class="cijfer"><div class="waarde">${kern}<span class="label"> / ${alle.length - kern}</span></div><div class="label">kerndiensten / omkaderend</div></div>
+      <div class="cijfer"><div class="waarde">${extern}</div><div class="label">extern gerichte diensten</div></div>
+    </div>
+    <section class="panel" aria-labelledby="fasekop">
+      <h2 id="fasekop">Fase in de beleidscyclus</h2>
+      <div class="fasen">${perFase.map(f => `<button type="button" class="fase" data-fase="${esc(f.sleutel)}" aria-pressed="${f.sleutel === staat.fase}" title="${esc(f.waarde)}">
+        <span class="lbl">${esc(f.waarde)}</span><span class="bar"><span style="width:${(f.n / max * 100).toFixed(1)}%"></span></span><span class="n">${f.n}</span></button>`).join('')}</div>
+    </section>
+    <div class="filters">
+      <input type="search" id="zoek" placeholder="Zoek in diensten en producten" value="${esc(staat.zoek)}" aria-label="Zoek in diensten en producten">
+      <label for="type">Type
+        <select id="type">
+          <option value="">alle</option>
+          <option value="Kern" ${staat.type === 'Kern' ? 'selected' : ''}>kern</option>
+          <option value="Omkaderend" ${staat.type === 'Omkaderend' ? 'selected' : ''}>omkaderend</option>
+        </select></label>
+      <label for="alleen"><input type="checkbox" id="alleen" ${staat.alleen ? 'checked' : ''}> enkel deze afdeling</label>
+      <div class="acties">
+        ${staat.fase || staat.zoek || staat.type || staat.alleen ? '<button type="button" class="knop" id="wis">Filters wissen</button>' : ''}
+        <button type="button" class="knop" id="csv">Download csv</button>
+      </div>
+    </div>
+    <div class="telling">${lijst.length === alle.length ? `${alle.length} diensten` : `${lijst.length} van ${alle.length} diensten`}</div>
+    ${lijst.length ? [...groepen.values()].map(g1 => `<section class="d1">
+        <h3><span class="code">${esc(g1.n)}</span>${esc(g1.l)}</h3>
+        ${[...g1.d2.values()].map(g2 => `<div class="d2"><h4><span class="code">${esc(g2.n)}</span>${esc(g2.l)}</h4>${g2.d3.map(dienstHtml).join('')}</div>`).join('')}
+      </section>`).join('') : '<div class="leeg">Geen diensten voor deze filters.</div>'}
+  `;
+
+  const zoekveld = $('#zoek');
+  zoekveld.addEventListener('input', e => { staat.zoek = e.target.value; tekenBehoudFocus('zoek'); });
+  $('#type').addEventListener('change', e => { staat.type = e.target.value; teken(); });
+  $('#alleen').addEventListener('change', e => { staat.alleen = e.target.checked; teken(); });
+  $('#wis')?.addEventListener('click', () => { Object.assign(staat, { zoek: '', type: '', fase: '', alleen: false }); teken(); });
+  $('#csv').addEventListener('click', () => downloadCsv(org, lijst));
+  document.querySelectorAll('.fase').forEach(b => b.addEventListener('click', () => {
+    staat.fase = staat.fase === b.dataset.fase ? '' : b.dataset.fase; teken();
+  }));
+}
+
+function tekenBehoudFocus(id) {
+  const el = document.getElementById(id); const pos = el?.selectionStart;
+  teken();
+  const nieuw = document.getElementById(id);
+  if (nieuw) { nieuw.focus(); if (pos != null) nieuw.setSelectionRange(pos, pos); }
+}
+
+function downloadCsv(org, lijst) {
+  const kol = ['dienst 1', 'dienst 2', 'dienst 3 sleutel', 'dienst 3', 'product sleutel', 'product', 'type dienst', 'fase beleidscyclus', 'gericht', 'trigger', 'samen met'];
+  const veld = v => /[",\n]/.test(v) ? '"' + v.replaceAll('"', '""') + '"' : v;
+  const rijen = [];
+  for (const d of lijst) {
+    const anderen = [...d.orgs].filter(i => i !== org.iri).map(i => data.perIri.get(i)?.afk ?? i).sort().join(' ');
+    for (const p of d.producten.length ? d.producten : [{ id: '', titel: '' }]) {
+      rijen.push([`${d.d1.n} ${d.d1.l}`, `${d.d2.n} ${d.d2.l}`, d.id, d.titel, p.id, p.titel, d.type,
+        d.fase?.waarde ?? '', d.gericht.join(' '), d.trigger.join(' '), anderen].map(veld).join(','));
+    }
+  }
+  const blob = new Blob(['﻿' + [kol.join(','), ...rijen].join('\n') + '\n'], { type: 'text/csv;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `producten-en-diensten-${org.afk.toLowerCase()}.csv`;
+  document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+function kies(afk) {
+  staat.afk = afk; Object.assign(staat, { zoek: '', type: '', fase: '', alleen: false });
+  if (location.hash.slice(1) !== afk) history.replaceState(null, '', '#' + afk);
+  opslag.set('pdc-afdeling', afk);
+  tekenAfdelingen(); teken();
+}
+
+async function start() {
+  const omgeving = $('#omgeving');
+  const bewaard = opslag.get('pdc-omgeving');
+  if (bewaard && [...omgeving.options].some(o => o.value === bewaard)) omgeving.value = bewaard;
+  try {
+    data = await laad(omgeving.value);
+  } catch (e) {
+    $('#inhoud').innerHTML = `<div class="status fout"><strong>De catalogus kon niet geladen worden.</strong><br>
+      ${esc(e.message)} Controleer of ${esc(omgeving.value)}/sparql bereikbaar is, of kies een andere bron.</div>`;
+    $('#afdelingen').innerHTML = '<h2>Afdeling</h2>';
+    return;
+  }
+  const lijst = afdelingen();
+  const gevraagd = decodeURIComponent(location.hash.slice(1)) || opslag.get('pdc-afdeling');
+  if (lijst.length === 0) {
+    $('#inhoud').innerHTML = '<div class="leeg">Deze bron bevat (nog) geen producten en diensten volgens CPSV-AP.</div>';
+    $('#afdelingen').innerHTML = '<h2>Afdeling</h2>';
+    return;
+  }
+  kies(lijst.some(o => o.afk === gevraagd) ? gevraagd : lijst[0].afk);
+}
+
+$('#afdelingen').addEventListener('click', e => { const b = e.target.closest('.afd'); if (b) kies(b.dataset.afk); });
+$('#omgeving').addEventListener('change', e => { opslag.set('pdc-omgeving', e.target.value); start(); });
+window.addEventListener('hashchange', () => {
+  const afk = decodeURIComponent(location.hash.slice(1));
+  if (data && afk !== staat.afk && data.organisaties.some(o => o.afk === afk)) kies(afk);
+});
+start();
+</script>
+</body>
+</html>
