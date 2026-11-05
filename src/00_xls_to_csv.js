@@ -201,6 +201,7 @@ cpsvBlank();
 for (const p of participaties) {
     cpsvRow({
         uri: 'participatie:' + p.id, type: 'cv:Participation', dct_identifier: p.id,
+        title: `${p.org.altLabel} – betrokken afdeling`,
         description: `${p.org.prefLabel} (${p.org.altLabel}) is betrokken bij de dienst '${p.dienst}'.`,
         role: ROL, hasParticipant: p.org.uri,
     });

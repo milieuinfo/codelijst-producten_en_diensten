@@ -68,7 +68,7 @@ ns:participatie
     sh:description   "De betrokkenheid van een afdeling bij een dienst."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
     sh:targetClass   cv:Participation ;
-    sh:property      ps:identifier, ps:participatie_identifier, ps:participatie_description,
+    sh:property      ps:identifier, ps:participatie_identifier, ps:title, ps:participatie_description,
                      ps:role, ps:hasParticipant .
 
 ns:publieke_organisatie
@@ -129,7 +129,7 @@ ps:organisatie_identifier
 ps:title
     a                sh:PropertyShape ;
     sh:name          "naam"@nl ;
-    sh:description   "De naam van de dienst, het product of de organisatie in het Nederlands. Precies 1 is toegelaten."@nl ;
+    sh:description   "De naam van de dienst, het product, de participatie of de organisatie in het Nederlands. Precies 1 is toegelaten."@nl ;
     rdfs:isDefinedBy omg_ont:producten_en_diensten-cpsv-ap-constraints ;
     sh:path          dct:title ;
     sh:datatype      rdf:langString ;
